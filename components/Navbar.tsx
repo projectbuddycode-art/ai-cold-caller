@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useContactForm } from '@/contexts/ContactFormContext';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -17,6 +18,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  const { openContactForm } = useContactForm();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -101,15 +103,14 @@ export default function Navbar() {
           </div>
 
           {/* CTA Button */}
-          <motion.a
-            href="#contact"
-            onClick={(e) => handleSmoothScroll(e, '#contact')}
+          <motion.button
+            onClick={openContactForm}
             className="hidden md:block px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-semibold rounded-lg hover:shadow-lg transition-all"
             whileHover={{ y: -2, boxShadow: '0 12px 24px rgba(37, 99, 235, 0.3)' }}
             whileTap={{ scale: 0.98 }}
           >
             Book Strategy Call
-          </motion.a>
+          </motion.button>
 
           {/* Mobile Menu Button */}
           <motion.button
@@ -158,14 +159,13 @@ export default function Navbar() {
                 {item.label}
               </motion.a>
             ))}
-            <motion.a
-              href="#contact"
-              onClick={(e) => handleSmoothScroll(e, '#contact')}
+            <motion.button
+              onClick={() => { setIsMobileMenuOpen(false); openContactForm(); }}
               className="block w-full mt-4 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-semibold rounded-lg text-center"
               whileTap={{ scale: 0.95 }}
             >
               Book Strategy Call
-            </motion.a>
+            </motion.button>
           </div>
         </motion.div>
       </div>

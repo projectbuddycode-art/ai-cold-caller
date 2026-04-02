@@ -27,6 +27,28 @@ export default function Testimonials() {
       rating: 5,
       image: '👨‍💻',
     },
+    // Indian client reviews
+    {
+      quote: "Project Buddy's AI solutions transformed our customer outreach. We saw a 50% increase in engagement within weeks. The team is highly professional and understands the Indian market well.",
+      author: 'Priya Sharma',
+      role: 'Head of Marketing, Mumbai Fintech',
+      rating: 5,
+      image: '👩‍💼',
+    },
+    {
+      quote: "Excellent service and support! Their automation helped us scale faster and reduced manual work drastically. Highly recommended for Indian startups.",
+      author: 'Amit Verma',
+      role: 'Co-Founder, Delhi SaaS Solutions',
+      rating: 5,
+      image: '👨‍💼',
+    },
+    {
+      quote: "We were impressed by the quick turnaround and deep technical expertise. The results exceeded our expectations. Will work with them again!",
+      author: 'Sneha Patel',
+      role: 'Product Manager, Bangalore HealthTech',
+      rating: 5,
+      image: '👩‍💻',
+    },
   ];
 
   return (

@@ -66,7 +66,7 @@ export default function Navbar() {
             >
               <div className="relative w-10 h-10 md:w-12 md:h-12">
                 <Image
-                  src="/images/logo.jpg"
+                  src="/images/logo .jpg"
                   alt="Project Buddy Logo"
                   width={48}
                   height={48}

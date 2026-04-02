@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from './animations';
-import { CheckCircle2, Linkedin,  ArrowRight } from 'lucide-react';
+import { CheckCircle2, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 import { useContactForm } from '@/contexts/ContactFormContext';
 

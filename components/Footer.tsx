@@ -31,7 +31,7 @@ export default function Footer() {
                 whileHover={{ scale: 1.05 }}
               >
                 <Image
-                  src="/images/logo .jpg"
+                  src="/images/logo.jpg"
                   alt="Project Buddy Logo"
                   fill
                   className="object-contain"

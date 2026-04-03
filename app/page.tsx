@@ -12,18 +12,9 @@ import PremiumCTA from '@/components/PremiumCTA';
 
 export default function Home() {
   return (
-    <main className="overflow-hidden">
-      <Hero />
-      <HowItWorks />
-      <BusinessImpact />
-      <WhyProjectBuddy />
-      <Services />
-      <CaseStudies />
-      <Authority />
-      <Testimonials />
-      <LeadershipTeam />
-      <FAQ />
-      <PremiumCTA />
-    </main>
+    <div>
+      <h1>Project Buddy</h1>
+      <p>Website is live 🚀</p>
+    </div>
   );
 }

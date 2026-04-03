@@ -1,8 +1,12 @@
 import { NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.SUPABASE_URL;
-const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
+const supabaseUrl = process.env.SUPABASE_URL!;
+const supabaseAnonKey = process.env.SUPABASE_ANON_KEY!;
+
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error("Missing Supabase environment variables");
+}
 
 const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
@@ -46,7 +50,7 @@ export async function POST(req: Request) {
   } catch (error) {
     console.error("API error:", error);
     return NextResponse.json(
-      { error: error?.message || "Unknown server error" },
+      { error: error instanceof Error ? error.message : "Unknown server error" },
       { status: 500 }
     );
   }

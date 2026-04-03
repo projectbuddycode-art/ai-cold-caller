@@ -1,5 +1,10 @@
 import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseAnonKey = process.env.SUPABASE_ANON_KEY;
+
+const supabase = createClient(supabaseUrl, supabaseAnonKey);
 
 export async function POST(req: Request) {
   try {
@@ -24,26 +29,15 @@ export async function POST(req: Request) {
       );
     }
 
-    const resend = new Resend(process.env.RESEND_API_KEY);
+    // Insert into Supabase "leads" table
+    const { error } = await supabase
+      .from('leads')
+      .insert([{ name, email, company, message }]);
 
-    // Send email
-    try {
-      await resend.emails.send({
-        from: 'Project Buddy <onboarding@resend.dev>',
-        to: 'info@projectbuddy.co.in',
-        subject: 'New Website Lead',
-        html: `
-          <h2>New Website Lead</h2>
-          <p><strong>Name:</strong> ${name}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Company:</strong> ${company || 'N/A'}</p>
-          <p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br/>' )}</p>
-        `,
-      });
-    } catch (resendError) {
-      console.error("Resend error:", resendError);
+    if (error) {
+      console.error("Supabase insert error:", error);
       return NextResponse.json(
-        { error: "Failed to send email via Resend" },
+        { error: error.message || "Failed to save lead" },
         { status: 500 }
       );
     }

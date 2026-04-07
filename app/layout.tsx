@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     'Workflow Automation',
     'AI-Powered Solutions',
   ],
-  authors: [{ name: 'Project Buddy', url: 'https://projectbuddy.co.in' }],
+  authors: [{ name: 'Project Buddy', url: 'https://www.projectbuddy.co.in'' }],
   creator: 'Project Buddy',
   publisher: 'Project Buddy',
   openGraph: {
@@ -42,12 +42,12 @@ export const metadata: Metadata = {
     description:
       'Enterprise-grade AI automation systems and scalable SaaS platforms. Built by engineers from JP Morgan Chase, Cisco.',
     type: 'website',
-    url: 'https://projectbuddy.co.in',
+    url: 'https://www.projectbuddy.co.in',
     siteName: 'Project Buddy',
     locale: 'en_US',
     images: [
       {
-        url: 'https://projectbuddy.co.in/og-image.png',
+        url: 'https://www.projectbuddy.co.in/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Project Buddy - AI & SaaS Engineering',
@@ -73,7 +73,7 @@ export const metadata: Metadata = {
     googleBot: 'index, follow',
   },
   alternates: {
-    canonical: 'https://projectbuddy.co.in',
+    canonical: 'https://www.projectbuddy.co.in',
   },
 };
 

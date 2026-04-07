@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: 'Project Buddy | AI & SaaS Engineering Studio',
   description:
     'Enterprise-grade AI automation systems and scalable SaaS platforms. Built by engineers from JP Morgan Chase, Cisco. Fast execution, no agency bloat.',
+
   keywords: [
     'AI Engineering',
     'SaaS Development',
@@ -34,15 +35,18 @@ export const metadata: Metadata = {
     'Workflow Automation',
     'AI-Powered Solutions',
   ],
-  authors: [{ name: 'Project Buddy', url: 'https://www.projectbuddy.co.in'' }],
+
+  authors: [{ name: 'Project Buddy', url: 'https://www.projectbuddy.co.in' }],
+
   creator: 'Project Buddy',
   publisher: 'Project Buddy',
+
   openGraph: {
     title: 'Project Buddy | AI & SaaS Engineering Studio',
     description:
-      'Enterprise-grade AI automation systems and scalable SaaS platforms. Built by engineers from JP Morgan Chase, Cisco.',
+      'Enterprise-grade AI automation systems and scalable SaaS platforms.',
     type: 'website',
-    url: 'https://www.projectbuddy.co.in',
+    url: 'https://www.projectbuddy.co.in', // ✅ FIXED (www consistency)
     siteName: 'Project Buddy',
     locale: 'en_US',
     images: [
@@ -54,16 +58,19 @@ export const metadata: Metadata = {
       },
     ],
   },
+
   twitter: {
     card: 'summary_large_image',
     title: 'Project Buddy | AI & SaaS Engineering Studio',
     description:
-      'Enterprise-grade AI automation systems and scalable SaaS platforms for startups.',
+      'Enterprise-grade AI automation systems and scalable SaaS platforms.',
     creator: '@projectbuddy',
   },
+
   verification: {
     google: 'your-google-verification-code',
   },
+
   robots: {
     index: true,
     follow: true,
@@ -72,8 +79,14 @@ export const metadata: Metadata = {
     'max-video-preview': -1,
     googleBot: 'index, follow',
   },
+
   alternates: {
-    canonical: 'https://www.projectbuddy.co.in',
+    canonical: 'https://www.projectbuddy.co.in', // ✅ FIXED
+  },
+
+  // 🔥 FACEBOOK DOMAIN VERIFICATION (CRITICAL)
+  other: {
+    'facebook-domain-verification': '43vlc6bght55fqy30t4w1xrmfb2deh',
   },
 };
 

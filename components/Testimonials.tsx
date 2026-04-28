@@ -12,21 +12,21 @@ export default function Testimonials() {
       author: 'Sarah Chen',
       role: 'CEO, PropTech Startup',
       rating: 5,
-      image: '/images/muskan.jpg',
+      image: '/images/logo.jpg',
     },
     {
       quote: "From concept to production, they handled everything. Our lead generation increased by 65% in the first month. Worth every penny.",
       author: 'James Rodriguez',
       role: 'Founder, SaaS Platform',
       rating: 5,
-      image: '/images/vaibhav.jpg',
+      image: '/images/founder.jpg',
     },
     {
       quote: "The team understood our vision immediately and delivered beyond expectations. Their AI automation cut our operational costs in half.",
       author: 'Michael Park',
       role: 'Operations Director, Scale-up',
       rating: 5,
-      image: '/images/logo.jpg',
+      image: '/images/muskan.jpg',
     },
     // Indian client reviews
     {
@@ -34,21 +34,21 @@ export default function Testimonials() {
       author: 'Priya Sharma',
       role: 'Head of Marketing, Global Fintech',
       rating: 5,
-      image: '/images/logo.jpg',
+      image: '/images/vaibhav.jpg',
     },
     {
       quote: "Excellent service and support! Their automation helped us scale faster and reduced manual work drastically. Highly recommended for any business looking to innovate.",
       author: 'Amit Verma',
       role: 'Co-Founder, SaaS Solutions',
       rating: 5,
-      image: '/images/muskan.jpg',
+      image: '/images/logo.jpg',
     },
     {
       quote: "We were impressed by the quick turnaround and deep technical expertise. The results exceeded our expectations. Will work with them again!",
       author: 'Sneha Patel',
       role: 'Product Manager, Bangalore HealthTech',
       rating: 5,
-      image: '👩‍💻',
+      image: '/images/founder.jpg',
     },
   ];
 

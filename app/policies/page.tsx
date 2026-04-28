@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -20,41 +19,17 @@ export const metadata: Metadata = {
 export default function AiSchoolManagementBlog() {
   return (
     <main className="overflow-hidden">
-      <motion.section
-        className="relative py-20 md:py-32 bg-gradient-to-br from-purple-50 to-indigo-50"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-      >
+      <section className="relative py-20 md:py-32 bg-gradient-to-br from-purple-50 to-indigo-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h1
-            className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-tight mb-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-tight mb-6">
             How AI Can Transform School Management Systems
-          </motion.h1>
-          <motion.p
-            className="text-lg text-slate-600 mb-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            By Project Buddy Team • April 5, 2026 • SaaS Development
-          </motion.p>
-          <motion.p
-            className="text-xl text-slate-700 max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            Learn about the revolutionary impact of AI on educational administration, student performance analysis, and parent-teacher communication.
-          </motion.p>
+          </h1>
+          <p className="text-lg text-slate-600 mb-4">By Project Buddy Team • April 5, 2026 • SaaS Development</p>
+          <p className="text-xl text-slate-700 max-w-2xl mx-auto">Learn about the revolutionary impact of AI on educational administration, student performance analysis, and parent-teacher communication.</p>
         </div>
-      </motion.section>
+      </section>
 
-      <motion.article className="py-16 md:py-24 bg-white">
+      <article className="py-16 md:py-24 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-purple text-slate-700">
           <Image
             src="/images/blog/school-management-ai.jpg"
@@ -141,7 +116,7 @@ export default function AiSchoolManagementBlog() {
             Ready to bring intelligent transformation to your educational institution? <Link href="/case-study-school-management-ai-system" className="text-purple-600 hover:underline font-semibold">Read our case study on AI-Powered School Management Systems</Link> or <Link href="/contact" className="text-purple-600 hover:underline font-semibold">contact Project Buddy today</Link> to explore how we can build a custom solution for you.
           </p>
         </div>
-      </motion.article>
+      </article>
 
       <FAQ />
       <CTA />

@@ -1,7 +1,6 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import Image from 'next/image'; // Import Image component
 import { containerVariants, itemVariants } from './animations';
 import { Star } from 'lucide-react';
 
@@ -11,49 +10,49 @@ export default function Testimonials() {
       quote: "They built our entire AI calling system in 6 weeks. The quality of engineering was top-notch, and they were responsive to every request. Highly recommended.",
       author: 'Sarah Chen',
       role: 'CEO, PropTech Startup',
-      rating: 5,
-      image: '/images/logo.jpg',
+      rating: 5, // Consistent rating
+      image: '/images/testimonials/avatar-1.jpg', // Placeholder image
     },
     {
       quote: "From concept to production, they handled everything. Our lead generation increased by 65% in the first month. Worth every penny.",
       author: 'James Rodriguez',
       role: 'Founder, SaaS Platform',
-      rating: 5,
-      image: '/images/founder.jpg',
+      rating: 5, // Consistent rating
+      image: '/images/testimonials/avatar-2.jpg', // Placeholder image
     },
     {
       quote: "The team understood our vision immediately and delivered beyond expectations. Their AI automation cut our operational costs in half.",
       author: 'Michael Park',
       role: 'Operations Director, Scale-up',
-      rating: 5,
-      image: '/images/muskan.jpg',
+      rating: 5, // Consistent rating
+      image: '/images/testimonials/avatar-3.jpg', // Placeholder image
     },
     // Indian client reviews
     {
       quote: "Project Buddy's AI solutions transformed our customer outreach. We saw a significant increase in engagement within weeks. The team is highly professional and delivers exceptional results.",
       author: 'Priya Sharma',
       role: 'Head of Marketing, Global Fintech',
-      rating: 5,
-      image: '/images/vaibhav.jpg',
+      rating: 5, // Consistent rating
+      image: '/images/testimonials/avatar-4.jpg', // Placeholder image
     },
     {
       quote: "Excellent service and support! Their automation helped us scale faster and reduced manual work drastically. Highly recommended for any business looking to innovate.",
       author: 'Amit Verma',
       role: 'Co-Founder, SaaS Solutions',
-      rating: 5,
-      image: '/images/logo.jpg',
+      rating: 5, // Consistent rating
+      image: '/images/testimonials/avatar-5.jpg', // Placeholder image
     },
     {
       quote: "We were impressed by the quick turnaround and deep technical expertise. The results exceeded our expectations. Will work with them again!",
       author: 'Sneha Patel',
       role: 'Product Manager, Bangalore HealthTech',
       rating: 5,
-      image: '/images/founder.jpg',
+      image: '👩‍💻',
     },
   ];
 
   return (
-    <section id="testimonials" className="relative py-20 md:py-28 overflow-hidden">
+    <section className="relative py-20 md:py-28 overflow-hidden">
       {/* Background Gradients */}
       <div className="absolute inset-0 -z-10 pointer-events-none">
         <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-indigo-100 to-transparent rounded-full blur-3xl opacity-10" />
@@ -123,12 +122,15 @@ export default function Testimonials() {
                 <div className="flex items-center gap-4 pt-8 border-t border-slate-200">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-2xl relative overflow-hidden">
                     {testimonial.image.startsWith('/') ? (
-                      <Image
+                      <img
                         src={testimonial.image}
                         alt={`Testimonial from ${testimonial.author}, ${testimonial.role}`}
-                        fill
-                        className="object-cover"
-                        sizes="48px"
+                        className="object-cover w-full h-full"
+                        onError={(e) => {
+                          const t = e.currentTarget as HTMLImageElement;
+                          t.onerror = null;
+                          t.src = '/images/placeholder-avatar.svg';
+                        }}
                       />
                     ) : (
                       <span role="img" aria-label="Profile avatar">{testimonial.image}</span>

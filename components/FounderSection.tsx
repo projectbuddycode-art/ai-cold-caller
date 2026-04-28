@@ -75,12 +75,12 @@ export default function FounderSection() {
             variants={fadeInUp}
           >
             <div className="relative w-full max-w-sm mx-auto aspect-square rounded-3xl overflow-hidden shadow-2xl bg-slate-200">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-indigo-600/20 z-10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-indigo-600/10 z-0 pointer-events-none" />
               <Image
                 src="/images/founder.jpg"
                 alt="Shivam Dubey - Founder & CEO"
                 fill
-                className="object-cover"
+                className="object-cover relative z-10"
                 priority
                 quality={90}
                 sizes="(max-width: 768px) 100vw, 384px"

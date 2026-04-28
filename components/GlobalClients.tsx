@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { Globe, Zap, Lock, DollarSign } from 'lucide-react';
-import Image from 'next/image';
 
 export default function GlobalClients() {
   const stats = [
@@ -12,12 +11,12 @@ export default function GlobalClients() {
   ];
 
   const clients = [
-    { name: 'Project Buddy', logo: '/images/logo.jpg' },
-    { name: 'Shivam Dubey', logo: '/images/founder.jpg' },
-    { name: 'Muskan', logo: '/images/muskan.jpg' },
-    { name: 'Vaibhav', logo: '/images/vaibhav.jpg' },
-    { name: 'Project Buddy', logo: '/images/logo.jpg' },
-    { name: 'Muskan', logo: '/images/muskan.jpg' },
+    { name: 'Client 1', logo: '/images/clients/client1.png' },
+    { name: 'Client 2', logo: '/images/clients/client2.png' },
+    { name: 'Client 3', logo: '/images/clients/client3.png' },
+    { name: 'Client 4', logo: '/images/clients/client4.png' },
+    { name: 'Client 5', logo: '/images/clients/client5.png' },
+    { name: 'Client 6', logo: '/images/clients/client6.png' },
   ];
 
   const reasons = [
@@ -98,21 +97,18 @@ export default function GlobalClients() {
                 viewport={{ once: true }}
                 className="flex items-center justify-center p-4 bg-white rounded-lg border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all"
               >
-                <div className="relative w-32 h-16">
-                  <Image
+                <div className="relative w-32 h-16 flex items-center justify-center">
+                  <img
                     src={client.logo}
                     alt={client.name}
-                    fill
-                    className="object-contain"
-                    sizes="128px"
+                    className="object-contain max-h-12"
                     onError={(e) => {
-                      // Fallback: show client name if image fails
-                      e.currentTarget.style.display = 'none';
+                      const target = e.currentTarget as HTMLImageElement;
+                      target.onerror = null;
+                      // Replace with inline SVG placeholder
+                      target.src = '/images/placeholder-client.svg';
                     }}
                   />
-                  <div className="hidden absolute inset-0 flex items-center justify-center text-xs font-semibold text-slate-600 text-center px-2">
-                    {client.name}
-                  </div>
                 </div>
               </motion.div>
             ))}

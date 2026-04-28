@@ -138,7 +138,7 @@ export default function OurProducts() {
                       onClick={openContactForm}
                       className={`w-full px-6 py-3 bg-gradient-to-r ${product.statusColor} text-white font-semibold rounded-xl shadow-soft-lg hover:shadow-soft-xl transition-all`}
                       whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.98 }}
+                      whileTap={{ scale: 0.98 }} // Consistent button styling
                     >
                       Request Access
                     </motion.button>

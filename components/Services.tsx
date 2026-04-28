@@ -15,6 +15,7 @@ import {
   CheckCircle,
   Lightbulb,
   TrendingUp,
+  Smartphone,
 } from 'lucide-react';
 
 interface ServiceDetail {
@@ -160,6 +161,26 @@ export default function Services() {
         },
       ],
     },
+    {
+      id: 'mobile-web-apps',
+      icon: Smartphone,
+      title: 'Mobile & Web Applications',
+      subtitle: 'Intuitive Apps for Every Platform',
+      problem: 'Your business needs a custom application but lacks the expertise to build it',
+      benefit: 'Deliver seamless user experiences with high-performance mobile and web applications',
+      metric: '90%',
+      metricLabel: 'User satisfaction',
+      color: 'from-purple-600 to-purple-400',
+      bgGradient: 'from-purple-50 to-purple-100/30',
+      borderColor: 'border-purple-200',
+      details: [
+        { title: 'iOS & Android App Development', description: 'Native and cross-platform mobile applications', icon: Smartphone },
+        { title: 'Progressive Web Apps (PWAs)', description: 'Deliver app-like experiences through web browsers', icon: Code2 },
+        { title: 'Responsive Web Design', description: 'Applications optimized for all devices and screen sizes', icon: CheckCircle },
+        { title: 'API Integration & Backend', description: 'Robust backend systems and third-party integrations', icon: TrendingUp },
+      ],
+
+    },
   ];
 
   return (
@@ -237,7 +258,7 @@ export default function Services() {
                 }
                 className={`relative group text-left rounded-2xl p-8 border-2 transition-all duration-300 ${
                   isExpanded
-                    ? `${service.borderColor} bg-gradient-to-br ${service.bgGradient} shadow-lg`
+                    ? `${service.borderColor} bg-gradient-to-br ${service.bgGradient} shadow-lg` // Consistent styling
                     : 'border-neutral-200 hover:border-neutral-300 bg-white hover:shadow-lg'
                 }`}
                 variants={itemVariants}
@@ -245,7 +266,7 @@ export default function Services() {
               >
                 {/* Gradient overlay on hover */}
                 <div
-                  className={`absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br ${service.color} rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-10`}
+                  className={`absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br ${service.color} rounded-full opacity-0 group-hover:opacity-10 transition-opacity duration-500 -z-10`} // Consistent transition
                 />
 
                 {/* Icon */}
@@ -293,7 +314,7 @@ export default function Services() {
                   className="absolute top-6 right-6"
                   animate={{ rotate: isExpanded ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
-                >
+                > {/* Consistent transition */}
                   <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-primary-600 transition-colors" />
                 </motion.div>
               </motion.button>
@@ -311,7 +332,7 @@ export default function Services() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.4 }}
+              transition={{ duration: 0.4 }} // Consistent transition
             >
               {/* Find current service */}
               {services.map((service) =>
@@ -339,7 +360,7 @@ export default function Services() {
                       <motion.button
                         onClick={() => setExpandedService(null)}
                         className="text-neutral-400 hover:text-neutral-600 transition-colors"
-                        whileHover={{ scale: 1.1 }}
+                        whileHover={{ scale: 1.1 }} // Consistent button styling
                       >
                         ✕
                       </motion.button>
@@ -385,7 +406,7 @@ export default function Services() {
                       className={`mt-8 px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${service.color} hover:shadow-lg transition-all`}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      initial={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0, y: 10 }} // Consistent animation
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: 0.4 }}
                     >

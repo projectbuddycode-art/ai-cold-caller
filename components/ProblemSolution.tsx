@@ -105,7 +105,7 @@ export default function Tabs() {
                     ? `bg-gradient-to-r ${tab.gradient} text-white shadow-lg scale-105`
                     : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-gray-300'
                 }`}
-                whileHover={{ y: -2 }}
+                whileHover={{ y: -2 }} // Consistent button styling
                 whileTap={{ scale: 0.95 }}
               >
                 <Icon size={20} className={isActive ? '' : `group-hover:scale-110 transition-transform`} />

@@ -74,7 +74,7 @@ export default function WhyProjectBuddy() {
             Just a Senior Engineer Who Ships
           </p>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Founded by a software engineer from JP Morgan Chase, Cisco, and [24]7.ai—with one mission: make enterprise-grade development accessible to every founder
+            Project Buddy is a software development company founded by an engineer from JP Morgan Chase, Cisco, and [24]7.ai—with one mission: make enterprise-grade development accessible to every founder.
           </p>
         </motion.div>
 
@@ -94,7 +94,7 @@ export default function WhyProjectBuddy() {
                 className={`group relative border-2 ${benefit.borderColor} ${benefit.bgColor} rounded-3xl p-8 md:p-10 hover:shadow-lg transition-all duration-300`}
                 variants={fadeInUp}
                 custom={idx}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -8 }} // Consistent animation
               >
                 {/* Icon */}
                 <motion.div

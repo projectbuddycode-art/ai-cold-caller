@@ -42,7 +42,7 @@ export default function StatsBanner() {
                   <motion.div
                     className="text-4xl md:text-5xl font-black bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent mb-3 leading-tight"
                     initial={{ scale: 0.8, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
+                    whileInView={{ scale: 1, opacity: 1 }} // Consistent animation
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.15 + 0.1, duration: 0.6 }}
                   >

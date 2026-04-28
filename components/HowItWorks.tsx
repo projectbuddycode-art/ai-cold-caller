@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { containerVariants, itemVariants } from './animations';
 import { Compass, Lightbulb, Hammer, Rocket, TrendingUp } from 'lucide-react';
 import { useContactForm } from '@/contexts/ContactFormContext';
@@ -8,34 +8,34 @@ import { useContactForm } from '@/contexts/ContactFormContext';
 export default function HowItWorks() {
   const { openContactForm } = useContactForm();
   const steps = [
-    {
-      icon: Compass,
-      title: 'Discovery',
-      description: 'Deep dive into your business, goals, and current painpoints',
+    { // New step: Capture
+      icon: Compass, // Reusing Compass icon
+      title: 'Capture',
+      description: 'Automatically collect leads from various channels like website forms, WhatsApp, and email.',
       number: '01',
     },
-    {
-      icon: Lightbulb,
-      title: 'Strategy',
-      description: 'Map out the perfect AI & SaaS solution architecture',
+    { // New step: Normalize
+      icon: Lightbulb, // Reusing Lightbulb icon
+      title: 'Normalize',
+      description: 'Standardize and clean lead data, ensuring consistency and accuracy across all sources.',
       number: '02',
     },
-    {
-      icon: Hammer,
-      title: 'Build',
-      description: 'Rapid development with clean, scalable code',
+    { // New step: AI Score
+      icon: Hammer, // Reusing Hammer icon
+      title: 'AI Score',
+      description: 'Utilize AI to score leads based on engagement, fit, and likelihood to convert, prioritizing high-value prospects.',
       number: '03',
     },
-    {
-      icon: Rocket,
-      title: 'Deploy',
-      description: 'Launch to production with zero downtime',
+    { // New step: Notify
+      icon: Rocket, // Reusing Rocket icon
+      title: 'Notify',
+      description: 'Instantly alert your sales team with detailed lead information and recommended next steps.',
       number: '04',
     },
-    {
-      icon: TrendingUp,
-      title: 'Scale',
-      description: 'Monitor, optimize, and grow with our support',
+    { // New step: Convert
+      icon: TrendingUp, // Reusing TrendingUp icon
+      title: 'Convert',
+      description: 'Empower your team to engage with pre-qualified leads, leading to higher conversion rates and increased revenue.',
       number: '05',
     },
   ];
@@ -95,12 +95,21 @@ export default function HowItWorks() {
                   >
                     {/* Step Number Circle */}
                     <div className="relative z-20">
-                      <div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center mb-6 shadow-soft-xl">
-                        <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center relative">
-                          <Icon className="w-10 h-10 text-blue-600" />
-                        </div>
-                      </div>
-                    </div>
+<div className="w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center mb-6 shadow-soft-xl">
+                       <div className="w-20 h-20 rounded-full bg-white flex items-center justify-center relative">
+                         <Icon className="w-10 h-10 text-blue-600" />
+                       </div>
+                     </div>
+                   </div>
+                   {/* Step Number */}
+                   <motion.div
+                     className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold text-sm shadow-md"
+                     initial={{ scale: 0 }}
+                     animate={{ scale: 1 }}
+                     transition={{ delay: idx * 0.1 + 0.4, type: 'spring', stiffness: 500, damping: 20 }}
+                   >
+                     {step.number}
+                   </motion.div>
 
                     {/* Content */}
                     <h3 className="text-2xl font-bold text-slate-900 mb-2">
@@ -136,7 +145,7 @@ export default function HowItWorks() {
             onClick={openContactForm}
             className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-xl shadow-soft-lg hover:shadow-soft-xl transition-all"
             whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.98 }}
+            whileTap={{ scale: 0.98 }} // Consistent button styling
           >
             Schedule Strategy Call
           </motion.button>

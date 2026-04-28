@@ -86,7 +86,7 @@ export default function TrustCards() {
             viewport={{ once: true }}
             animate={cardFloatingVariants(idx).animate}
             whileHover={{ y: -8, boxShadow: '0 16px 32px rgba(0, 0, 0, 0.12)' }}
-            className="group p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-300 transition-all cursor-pointer"
+            className="group p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-300 transition-all cursor-pointer" // Consistent styling
           >
             {/* Icon Circle */}
             <motion.div 

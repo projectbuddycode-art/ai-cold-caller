@@ -8,10 +8,9 @@ import Image from 'next/image';
 
 const navItems = [
   { label: 'Home', href: '/', section: 'home' },
-  { label: 'Services', href: '#services', section: 'services' },
-  { label: 'Work', href: '#case-studies', section: 'work' },
+  { label: 'Services', href: '/services', section: 'services' },
+  { label: 'Work', href: '/work', section: 'work' },
   { label: 'About', href: '/about', section: 'about' },
-  { label: 'Testimonials', href: '#testimonials', section: 'testimonials' },
 ];
 
 export default function Navbar() {
@@ -83,7 +82,7 @@ export default function Navbar() {
                 <span className="font-bold text-sm md:text-base text-slate-900">Project Buddy</span>
                 <span className="text-xs text-blue-600 font-medium">Turn idea into reality</span>
               </motion.div>
-            </motion.div>
+            </motion.div> 
           </Link>
 
           {/* Desktop Navigation */}
@@ -107,7 +106,7 @@ export default function Navbar() {
             onClick={openContactForm}
             className="hidden md:block px-6 py-2.5 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-semibold rounded-lg hover:shadow-lg transition-all"
             whileHover={{ y: -2, boxShadow: '0 12px 24px rgba(37, 99, 235, 0.3)' }}
-            whileTap={{ scale: 0.98 }}
+            whileTap={{ scale: 0.98 }} // Consistent button styling
           >
             Book Strategy Call
           </motion.button>
@@ -163,7 +162,7 @@ export default function Navbar() {
               onClick={() => { setIsMobileMenuOpen(false); openContactForm(); }}
               className="block w-full mt-4 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white text-sm font-semibold rounded-lg text-center"
               whileTap={{ scale: 0.95 }}
-            >
+            > {/* Consistent button styling */}
               Book Strategy Call
             </motion.button>
           </div>

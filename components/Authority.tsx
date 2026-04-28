@@ -2,11 +2,12 @@
 
 import { motion } from 'framer-motion';
 import { itemVariants, containerVariants } from './animations';
+import Image from 'next/image';
 
 export default function Authority() {
   const companies = [
-    { name: 'JP Morgan', initials: 'JPM' },
-    { name: 'Cisco', initials: 'CISCO' },
+    { name: 'JP Morgan', initials: 'JPM', logo: '/images/clients/jpm.png' },
+    { name: 'Cisco', initials: 'CISCO', logo: '/images/clients/cisco.png' },
   ];
 
   return (
@@ -50,16 +51,27 @@ export default function Authority() {
               <motion.div
                 className="group relative"
                 whileHover={{ scale: 1.05 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }} // Consistent animation
               >
                 {/* Glow Effect */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl blur-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10" />
 
                 {/* Logo Card */}
                 <div className="relative bg-white rounded-2xl p-12 border border-slate-200 shadow-soft-lg hover:shadow-soft-xl transition-all">
-                  {/* Logo Initials */}
-                  <div className="w-24 h-24 rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center mb-6 mx-auto group-hover:from-blue-600 group-hover:to-indigo-600 transition-all duration-300">
-                    <span className="text-white font-bold text-xl">
+                  {/* Logo - Image or Initials Fallback */}
+                  <div className="w-24 h-24 rounded-xl bg-gradient-to-br from-slate-900 to-slate-800 flex items-center justify-center mb-6 mx-auto group-hover:from-blue-600 group-hover:to-indigo-600 transition-all duration-300 relative overflow-hidden">
+                    <Image
+                      src={company.logo}
+                      alt={`${company.name} Logo`}
+                      width={96}
+                      height={96}
+                      className="object-contain w-full h-full p-2"
+                      onError={(e) => {
+                        // Fallback to initials if image fails to load
+                        e.currentTarget.style.display = 'none';
+                      }}
+                    />
+                    <span className="text-white font-bold text-xl absolute">
                       {company.initials}
                     </span>
                   </div>

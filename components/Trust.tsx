@@ -57,7 +57,7 @@ export default function Trust() {
                 key={idx}
                 className="bg-brand-bg rounded-lg md:rounded-xl p-4 sm:p-6 md:p-8 border border-brand-border hover:shadow-soft-lg transition-shadow"
                 variants={fadeInUp}
-                custom={idx}
+                custom={idx} // Consistent animation
                 whileHover={{ y: -4 }}
               >
                 <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-primary-600 mb-2">

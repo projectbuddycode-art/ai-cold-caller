@@ -180,7 +180,7 @@ export default function BusinessImpact() {
             onClick={openContactForm}
             className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-xl shadow-soft-lg hover:shadow-soft-xl transition-all"
             whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.98 }}
+            whileTap={{ scale: 0.98 }} // Consistent button styling
           >
             Get Your Custom Analysis
           </motion.button>

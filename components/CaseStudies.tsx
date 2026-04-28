@@ -214,7 +214,7 @@ export default function CaseStudies() {
                   onClick={openContactForm}
                   className={`w-full py-2 rounded-lg flex items-center justify-center gap-2 font-semibold text-white bg-gradient-to-r ${study.gradient} hover:shadow-lg transition-all`}
                   whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileTap={{ scale: 0.98 }} // Consistent button styling
                 >
                   View Details
                   <ArrowRight size={16} />
@@ -239,7 +239,7 @@ export default function CaseStudies() {
             onClick={openContactForm}
             className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:shadow-lg transition-all"
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.95 }} // Consistent button styling
           >
             Book a Strategy Call
             <ArrowRight size={20} />

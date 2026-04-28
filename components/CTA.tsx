@@ -97,14 +97,14 @@ export default function CTA() {
               <motion.button
                 onClick={openContactForm}
                 className="px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold rounded-lg hover:shadow-soft-xl transition-shadow text-base md:text-lg"
-                whileHover={{ y: -2 }}
+                whileHover={{ y: -2 }} // Consistent button styling
                 whileTap={{ scale: 0.98 }}
               >
                 Book Strategy Call
               </motion.button>
               <motion.button
                 onClick={openContactForm}
-                className="px-8 py-4 border-2 border-neutral-900 text-neutral-900 font-semibold rounded-lg hover:bg-neutral-50 transition-colors text-base md:text-lg"
+                className="px-8 py-4 border-2 border-neutral-900 text-neutral-900 font-semibold rounded-lg hover:bg-neutral-50 transition-colors text-base md:text-lg" // Consistent button styling
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
               >

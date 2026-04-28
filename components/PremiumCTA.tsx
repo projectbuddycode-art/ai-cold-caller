@@ -84,14 +84,14 @@ export default function PremiumCTA() {
               onClick={openContactForm}
               className="group px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-400 text-slate-900 font-semibold rounded-xl shadow-soft-lg hover:shadow-soft-xl transition-all flex items-center justify-center gap-2"
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
+              whileTap={{ scale: 0.98 }} // Consistent button styling
             >
               Apply to Work With Us
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.button>
             <motion.button
               onClick={openContactForm}
-              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all"
+              className="px-8 py-4 bg-white/10 backdrop-blur-sm border border-white/20 text-white font-semibold rounded-xl hover:bg-white/20 transition-all" // Consistent button styling
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >

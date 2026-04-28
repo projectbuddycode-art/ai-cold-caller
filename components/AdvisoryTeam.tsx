@@ -114,10 +114,11 @@ export default function AdvisoryTeam() {
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-indigo-600/10 z-10" />
                 <Image
                   src={member.image}
-                  alt={member.name}
+                  alt={`${member.name} - ${member.role} at Project Buddy`}
                   fill
+                  quality={80}
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 />
               </div>
 
@@ -176,7 +177,7 @@ export default function AdvisoryTeam() {
                   <a
                     href={`https://linkedin.com/in/${member.name.toLowerCase().replace(' ', '-')}`}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer" // Added rel="noopener noreferrer" for security
                     className="p-2 bg-indigo-100 hover:bg-indigo-600 text-indigo-600 hover:text-white rounded-lg transition-all"
                   >
                     <Linkedin className="w-5 h-5" />
@@ -211,7 +212,7 @@ export default function AdvisoryTeam() {
             onClick={openContactForm}
             className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-xl hover:shadow-lg transition-all"
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
+            whileTap={{ scale: 0.98 }} // Consistent button styling
           >
             Get In Touch
           </motion.button>

@@ -21,7 +21,7 @@ const team: TeamMember[] = [
   {
     name: 'Shivam Dubey',
     role: 'Founder & CEO',
-    image: '/images/founder.jpeg',
+    image: '/images/founder.jpg',
     bio: 'Founder, AI engineer, and product builder. 2+ years experience turning ideas into scalable SaaS businesses.',
     expertise: ['AI/SaaS Architecture', '100+ Projects', 'Rapid Prototyping', 'Leadership'],
     linkedin: 'https://www.linkedin.com/in/dshiv2414/',
@@ -115,10 +115,11 @@ export default function LeadershipTeam() {
               <div className="relative h-64 bg-gradient-to-br from-blue-100 to-indigo-100 overflow-hidden flex items-center justify-center">
                 <Image
                   src={member.image}
-                  alt={member.name}
+                  alt={`${member.name} - ${member.role} at Project Buddy`}
                   fill
-                  className="object-contain object-center transition-transform duration-300"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={80}
+                  className="object-cover object-center transition-transform duration-300"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 300px"
                 />
               </div>
               {/* Name & Role */}
@@ -142,7 +143,7 @@ export default function LeadershipTeam() {
             onClick={openContactForm}
             className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-lg hover:shadow-lg transition-all inline-block"
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.98 }}
+            whileTap={{ scale: 0.98 }} // Consistent button styling
           >
             Work With Us
           </motion.button>
@@ -164,9 +165,11 @@ export default function LeadershipTeam() {
                 <div className="relative w-40 h-40 mb-4">
                   <Image
                     src={team[openIdx].image}
-                    alt={team[openIdx].name}
+                    alt={`${team[openIdx].name} - ${team[openIdx].role}`}
                     fill
-                    className="object-contain object-center rounded-full border-4 border-blue-200"
+                    quality={90}
+                    className="object-cover object-center rounded-full border-4 border-blue-200"
+                    sizes="160px"
                   />
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-1">{team[openIdx].name}</h3>
@@ -183,7 +186,7 @@ export default function LeadershipTeam() {
                   <a
                     href={team[openIdx].linkedin}
                     target="_blank"
-                    rel="noopener noreferrer"
+                    rel="noopener noreferrer" // Added rel="noopener noreferrer" for security
                     className="w-10 h-10 rounded-lg bg-blue-100 hover:bg-blue-600 text-blue-600 hover:text-white flex items-center justify-center transition-all"
                     title="LinkedIn"
                   >

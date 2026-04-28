@@ -101,7 +101,7 @@ export default function TrustStrip() {
               key={idx}
               className="text-center"
               variants={{
-                hidden: { opacity: 0, y: 20 },
+                  hidden: { opacity: 0, y: 20 }, // Consistent animation
                 visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
               }}
             >
@@ -118,7 +118,7 @@ export default function TrustStrip() {
           className="text-center mt-12 text-sm text-gray-600 max-w-2xl mx-auto"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           Built by the same engineers who shipped systems at JP Morgan and Cisco.

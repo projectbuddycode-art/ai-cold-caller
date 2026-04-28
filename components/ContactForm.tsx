@@ -260,7 +260,7 @@ export default function ContactForm() {
                   type="button"
                   onClick={() => setOpenDropdown(openDropdown === 'budget' ? null : 'budget')}
                   className={`w-full px-4 py-3 rounded-lg border-2 transition-all duration-200 flex items-center justify-between text-left ${
-                    errors.budget
+                    errors.budget // Consistent styling for dropdowns
                       ? 'border-red-500 focus:border-red-600'
                       : 'border-gray-200 hover:border-gray-300 focus:border-blue-500'
                   } ${!formData.budget && 'text-gray-400'}`}
@@ -316,7 +316,7 @@ export default function ContactForm() {
                   type="button"
                   onClick={() => setOpenDropdown(openDropdown === 'projectType' ? null : 'projectType')}
                   className={`w-full px-4 py-3 rounded-lg border-2 transition-all duration-200 flex items-center justify-between text-left ${
-                    errors.projectType
+                    errors.projectType // Consistent styling for dropdowns
                       ? 'border-red-500 focus:border-red-600'
                       : 'border-gray-200 hover:border-gray-300 focus:border-blue-500'
                   } ${!formData.projectType && 'text-gray-400'}`}
@@ -372,7 +372,7 @@ export default function ContactForm() {
                   type="button"
                   onClick={() => setOpenDropdown(openDropdown === 'timeline' ? null : 'timeline')}
                   className={`w-full px-4 py-3 rounded-lg border-2 transition-all duration-200 flex items-center justify-between text-left ${
-                    errors.timeline
+                    errors.timeline // Consistent styling for dropdowns
                       ? 'border-red-500 focus:border-red-600'
                       : 'border-gray-200 hover:border-gray-300 focus:border-blue-500'
                   } ${!formData.timeline && 'text-gray-400'}`}
@@ -453,7 +453,7 @@ export default function ContactForm() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             disabled={isLoading}
-            type="submit"
+            type="submit" // Consistent button styling
             className="w-full mt-8 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-400 disabled:to-gray-500 text-white font-semibold py-4 rounded-lg transition-all duration-200 flex items-center justify-center gap-2"
           >
             {isLoading ? (

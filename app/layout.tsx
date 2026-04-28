@@ -20,33 +20,30 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'Project Buddy | AI & SaaS Engineering Studio',
-  description:
-    'Enterprise-grade AI automation systems and scalable SaaS platforms. Built by engineers from JP Morgan Chase, Cisco. Fast execution, no agency bloat.',
-
+  title: 'AI Automation & SaaS MVP Development for Startups',
+  description: 'Build AI-powered SaaS MVPs in 6-8 weeks. AI automation, CRM systems, lead generation agents. Serving startups globally. Free consultation.',
   keywords: [
-    'AI Engineering',
-    'SaaS Development',
-    'MVP Engineering',
-    'AI Automation',
-    'Startup CTO',
-    'Enterprise Software',
-    'AI Integration',
-    'Workflow Automation',
-    'AI-Powered Solutions',
+    'AI automation for startups',
+    'SaaS MVP development',
+    'AI agents for business',
+    'startup product development',
+    'AI lead generation system',
+    'CRM automation software',
+    'AI chatbot development',
+    'workflow automation platform',
+    'AI calling agents',
+    'business automation software',
   ],
 
   authors: [{ name: 'Project Buddy', url: 'https://www.projectbuddy.co.in' }],
 
-  creator: 'Project Buddy',
-  publisher: 'Project Buddy',
-
+  creator: 'Project Buddy - AI & SaaS Development',
+  publisher: 'Project Buddy - AI & SaaS Development',
   openGraph: {
-    title: 'Project Buddy | AI & SaaS Engineering Studio',
-    description:
-      'Enterprise-grade AI automation systems and scalable SaaS platforms.',
+    title: 'AI Automation & SaaS MVP Development for Startups',
+    description: 'Build AI-powered SaaS MVPs in 6-8 weeks. Serving startups globally. AI automation, CRM systems, lead generation agents.',
     type: 'website',
-    url: 'https://www.projectbuddy.co.in', // ✅ FIXED (www consistency)
+    url: 'https://www.projectbuddy.co.in',
     siteName: 'Project Buddy',
     locale: 'en_US',
     images: [
@@ -54,16 +51,15 @@ export const metadata: Metadata = {
         url: 'https://www.projectbuddy.co.in/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Project Buddy - AI & SaaS Engineering',
+        alt: 'AI Automation & SaaS MVP Development for Startups - Project Buddy',
       },
     ],
   },
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Project Buddy | AI & SaaS Engineering Studio',
-    description:
-      'Enterprise-grade AI automation systems and scalable SaaS platforms.',
+    title: 'AI Automation & SaaS MVP Development for Startups',
+    description: 'Build AI-powered SaaS MVPs in 6-8 weeks. Serving startups globally.',
     creator: '@projectbuddy',
   },
 
@@ -81,10 +77,9 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: 'https://www.projectbuddy.co.in', // ✅ FIXED
+    canonical: 'https://www.projectbuddy.co.in',
   },
 
-  // 🔥 FACEBOOK DOMAIN VERIFICATION (CRITICAL)
   other: {
     'facebook-domain-verification': '43vlc6bght55fqy30t4w1xrmfb2deh',
   },

@@ -52,7 +52,7 @@ export default function Footer() {
           >
             <h4 className="font-semibold text-neutral-900 mb-4">Company</h4>
             <ul className="space-y-2 text-sm text-neutral-600">
-              {['Services', 'Process', 'About', 'Contact'].map((item) => (
+              {['Services', 'Process', 'About', 'Contact', 'Case-Studies'].map((item) => (
                 <li key={item}>
                   <motion.a
                     href={`#${item.toLowerCase()}`}
@@ -75,10 +75,14 @@ export default function Footer() {
           >
             <h4 className="font-semibold text-neutral-900 mb-4">Resources</h4>
             <ul className="space-y-2 text-sm text-neutral-600">
-              {['Blog', 'Docs', 'FAQ', 'Support'].map((item) => (
+              {['Blog', 'FAQ', 'Privacy Policy', 'Terms of Service'].map((item) => (
                 <li key={item}>
                   <motion.a
-                    href="#"
+                    href={
+                      item === 'Blog' ? '/blog' :
+                      item === 'Privacy Policy' ? '/policies' :
+                      item === 'Terms of Service' ? '/policies#terms-of-service' : '#'
+                    }
                     className="hover:text-primary-600 transition-colors"
                     whileHover={{ x: 2 }}
                   >
@@ -109,9 +113,9 @@ export default function Footer() {
             {/* Social Links */}
             <div className="flex items-center space-x-4 mt-6">
               {[
-                { icon: Linkedin, label: 'LinkedIn' },
-                { icon: Twitter, label: 'Twitter' },
-              ].map(({ icon: Icon, label }) => (
+                { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/company/projectbuddyco/' },
+                { icon: Twitter, label: 'Twitter', href: 'https://twitter.com/projectbuddyco' },
+              ].map(({ icon: Icon, label, href }) => (
                 <motion.a
                   key={label}
                   href="#"
@@ -142,10 +146,10 @@ export default function Footer() {
             © {year} Project Buddy. All rights reserved. | Built with ❤️
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-neutral-900 transition-colors">
+            <a href="/policies" className="hover:text-neutral-900 transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-neutral-900 transition-colors">
+            <a href="/policies#terms-of-service" className="hover:text-neutral-900 transition-colors">
               Terms of Service
             </a>
           </div>

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { fadeInUp } from './animations';
 import { useContactForm } from '@/contexts/ContactFormContext';
+import Image from 'next/image';
 
 export default function About() {
   const { openContactForm } = useContactForm();
@@ -47,19 +48,23 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            {/* Avatar Placeholder */}
+            {/* Avatar Image - Full Size */}
             <motion.div
-              className="mb-8 relative h-96 rounded-2xl bg-gradient-to-br from-primary-100 to-blue-50 border border-brand-border overflow-hidden flex items-center justify-center"
-              whileHover={{ y: -4 }}
+              className="mb-8 relative w-full max-w-md mx-auto aspect-square rounded-3xl bg-white border-2 border-slate-200 overflow-hidden shadow-2xl"
+              whileHover={{ y: -8, boxShadow: '0 20px 40px rgba(37, 99, 235, 0.2)' }}
               transition={{ duration: 0.3 }}
             >
-              <div className="text-center">
-                <div className="text-6xl font-bold text-primary-200 mb-4">SD</div>
-                <p className="text-neutral-400 text-sm">Founder & CTO</p>
-              </div>
-
+              <Image
+                src="/images/founder.jpg"
+                alt="Shivam Dubey - Founder & CTO"
+                fill
+                className="object-cover w-full h-full"
+                priority
+                quality={95}
+                sizes="(max-width: 768px) 100vw, 400px"
+              />
               {/* Floating accent */}
-              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-br from-orange-200 to-transparent rounded-full blur-2xl opacity-30" />
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-br from-orange-200 to-transparent rounded-full blur-2xl opacity-20" />
             </motion.div>
           </motion.div>
 
@@ -112,7 +117,7 @@ export default function About() {
                 <h4 className="text-sm font-semibold text-neutral-900 mb-3 uppercase tracking-wide">
                   What Drives Us
                 </h4>
-                <p className="text-neutral-700 leading-relaxed">
+                <p className="text-neutral-700 leading-relaxed">Project Buddy is a software development company.
                   We believe engineering should be{' '}
                   <strong>simple, scalable, and result-driven.</strong> No fluff,
                   no excuses. Every line of code has a purpose. Every product

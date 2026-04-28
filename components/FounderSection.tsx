@@ -82,7 +82,8 @@ export default function FounderSection() {
                 fill
                 className="object-cover"
                 priority
-                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={90}
+                sizes="(max-width: 768px) 100vw, 384px"
               />
             </div>
 
@@ -128,7 +129,7 @@ export default function FounderSection() {
               className="text-slate-700 leading-relaxed text-base md:text-lg"
               variants={fadeInUp}
             >
-              Software Developer with 2+ years of experience in building scalable web applications, AI solutions, and SaaS products.
+              As a software development company, Project Buddy is led by a seasoned Software Developer with 2+ years of experience in building scalable web applications, AI solutions, and SaaS products.
             </motion.p>
 
             <motion.p
@@ -173,7 +174,7 @@ export default function FounderSection() {
                 onClick={openContactForm}
                 className="px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-xl hover:shadow-lg transition-all flex items-center justify-center gap-2"
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
+                whileTap={{ scale: 0.98 }} // Consistent button styling
               >
                 Schedule a Call
               </motion.button>
@@ -182,7 +183,7 @@ export default function FounderSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 border-2 border-slate-300 text-slate-700 font-semibold rounded-xl hover:border-blue-600 hover:text-blue-600 transition-all flex items-center justify-center gap-2"
-              >
+              > {/* Consistent link styling */}
                 <Linkedin className="w-5 h-5" />
                 Connect
               </a>

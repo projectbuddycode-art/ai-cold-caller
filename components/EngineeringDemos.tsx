@@ -107,7 +107,7 @@ export default function EngineeringDemos() {
                 className="group relative bg-brand-bg border border-brand-border rounded-xl p-6 md:p-8 overflow-hidden hover:shadow-soft-lg transition-all duration-300"
                 variants={fadeInUp}
                 custom={idx}
-                whileHover={{ y: -4 }}
+                whileHover={{ y: -4 }} // Consistent animation
               >
                 {/* Gradient Background */}
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-primary-100 to-transparent rounded-full opacity-0 group-hover:opacity-50 transition-opacity duration-500 -z-10" />

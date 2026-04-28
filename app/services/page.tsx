@@ -1,7 +1,6 @@
 import Services from '@/components/Services';
 import ServiceCards from '@/components/ServiceCards';
 import PremiumCTA from '@/components/PremiumCTA';
-import Footer from '@/components/Footer';
 
 export default function ServicesPage() {
   return (
@@ -9,7 +8,6 @@ export default function ServicesPage() {
       <Services />
       <ServiceCards />
       <PremiumCTA />
-      <Footer />
     </main>
   );
 }

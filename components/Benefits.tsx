@@ -93,7 +93,7 @@ export default function Benefits() {
                 className={`relative bg-gradient-to-br ${benefit.bgGradient} rounded-3xl border-2 ${benefit.borderColor} p-8 md:p-10 overflow-hidden`}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: true }} // Consistent animation
                 transition={{ delay: idx * 0.15, duration: 0.7, ease: 'easeOut' }}
                 whileHover={{ y: -8, scale: 1.02 }}
               >

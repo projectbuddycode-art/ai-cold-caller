@@ -186,7 +186,7 @@ export default function ServiceCards() {
                   <motion.button
                     className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-lg transition-colors"
                     whileHover={{ rotate: 90 }}
-                    whileTap={{ scale: 0.95 }}
+                    whileTap={{ scale: 0.95 }} // Consistent button styling
                   >
                     <X className="w-5 h-5 text-gray-400" />
                   </motion.button>
@@ -208,7 +208,7 @@ export default function ServiceCards() {
           <motion.button
             className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.95 }} // Consistent button styling
           >
             Schedule Free Consultation
           </motion.button>

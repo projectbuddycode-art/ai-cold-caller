@@ -283,7 +283,7 @@ export default function Demo() {
             onClick={openContactForm}
             className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2"
             whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileTap={{ scale: 0.95 }} // Consistent button styling
           >
             See Complete Integration
             <ArrowRight className="w-4 h-4" />

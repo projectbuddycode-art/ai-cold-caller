@@ -8,10 +8,10 @@ export default function Hero() {
   const { openContactForm } = useContactForm();
   
   const trustBadges = [
-    { icon: Shield, label: 'Enterprise Engineering\nExperience' },
-    { icon: Code, label: 'Built by Engineers from JP\nMorgan & Cisco' },
-    { icon: Zap, label: 'Production-Ready\nArchitecture' },
-    { icon: Award, label: '6-8 Week MVP\nDelivery' },
+    { icon: Shield, label: 'Built by Engineers\nfrom JP Morgan & Cisco' },
+    { icon: Code, label: 'Production-Ready\nArchitecture' },
+    { icon: Zap, label: '6–8 Week MVP\nDelivery' },
+    { icon: Award, label: 'Serving 50+\nGlobal Clients' },
   ];
 
   return (
@@ -30,7 +30,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Badge */}
+{/* Badge */}
           <motion.div
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-full px-4 py-2 mb-8"
             initial={{ opacity: 0, y: 20 }}
@@ -39,7 +39,7 @@ export default function Hero() {
           >
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
             <span className="text-sm font-medium text-blue-700">
-              Enterprise-Grade AI & SaaS Solutions
+              ✓ 6–8 Week MVP Delivery  •  Serving Startups Globally  •  AI + SaaS Specialists
             </span>
           </motion.div>
 
@@ -56,8 +56,8 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-block"
             >
-              AI & SaaS Systems Built
-            </motion.span>
+              AI Automation &
+            </motion.span>{' '}
             <br />
             <motion.span
               initial={{ opacity: 0, x: 20, filter: 'drop-shadow(0 0 10px rgba(59, 130, 246, 0.3))' }}
@@ -80,21 +80,39 @@ export default function Hero() {
                 }
               }}
               className="bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 bg-clip-text text-transparent inline-block"
+            > 
+              SaaS MVP Development
+            </motion.span>
+            <br />
+            <motion.span
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="inline-block"
             >
-              to Generate Revenue
+              for Startups Worldwide
             </motion.span>
           </motion.h1>
 
           {/* Subheadline */}
           <motion.p
-            className="text-lg text-slate-600 mb-10 leading-relaxed max-w-3xl mx-auto"
+            className="text-lg text-slate-600 mb-6 leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.25 }}
           >
-            Project Buddy engineers AI automation systems and scalable SaaS platforms for startups and growth-stage businesses that need execution without agency bloat.
+            Launch production-ready AI systems and SaaS products in 6–8 weeks. We help startups build intelligent automation that converts leads, scales workflows, and drives revenue.
           </motion.p>
 
+          {/* Supporting Paragraph */}
+          <motion.p
+            className="text-base text-slate-500 mb-10 leading-relaxed max-w-3xl mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            From AI calling agents to CRM automation, we transform business processes with cutting-edge AI—remotely, efficiently, and built to scale globally.
+          </motion.p>
           {/* CTA Buttons */}
           <motion.div
             className="flex flex-col sm:flex-row gap-5 justify-center mb-14"
@@ -108,7 +126,7 @@ export default function Hero() {
               whileHover={{ y: -4, scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              Book Strategy Call →
+              Schedule Strategy Call →
             </motion.button>
             <motion.button
               onClick={openContactForm}
@@ -135,7 +153,7 @@ export default function Hero() {
                 key={idx}
                 className="bg-white rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all border border-slate-100"
                 whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                transition={{ type: 'spring', stiffness: 300, damping: 30 }} // Consistent animation
               >
                 <motion.div
                   className="w-12 h-12 md:w-14 md:h-14 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center mb-4 text-white"
@@ -145,7 +163,7 @@ export default function Hero() {
                   <Icon className="w-6 h-6 md:w-7 md:h-7" />
                 </motion.div>
                 <p className="text-slate-800 font-bold text-center text-sm md:text-base leading-relaxed whitespace-pre-line">
-                  {badge.label}
+                  {badge.label.replace('JP\nMorgan', 'JP Morgan').replace('6-8 Week MVP\nDelivery', '6-8 Week MVP Delivery')}
                 </p>
               </motion.div>
             );

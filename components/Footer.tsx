@@ -118,7 +118,7 @@ export default function Footer() {
               ].map(({ icon: Icon, label, href }) => (
                 <motion.a
                   key={label}
-                  href="#"
+                  href={href}
                   className="w-8 h-8 rounded-lg bg-brand-border hover:bg-primary-100 flex items-center justify-center text-neutral-600 hover:text-primary-600 transition-colors"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}

@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { containerVariants, itemVariants } from './animations';
 import { Compass, Lightbulb, Hammer, Rocket, TrendingUp } from 'lucide-react';
 import { useContactForm } from '@/contexts/ContactFormContext';

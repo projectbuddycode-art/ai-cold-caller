@@ -68,12 +68,7 @@ export default function AIAgentsForBusiness() {
                 return (
                   <div key={idx} className="flex items-start gap-3">
                     <div className="text-2xl">
-                      {idx === 0 && '📞'}
-                      {idx === 1 && '✉️'}
-                      {idx === 2 && '💬'}
-                      {idx === 3 && '📅'}
-                      {idx === 4 && '❓'}
-                      {idx === 5 && '📊'}
+                      <Icon className="w-6 h-6 text-blue-600" />
                     </div>
                     <p className="text-slate-600">
                       <strong>{item.text.split(' ')[0]}</strong> {item.text.substring(item.text.indexOf(' ') + 1)}

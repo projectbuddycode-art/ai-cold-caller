@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CheckCircle2 } from 'lucide-react';
 import CTA from '@/components/CTA';
 import FAQ from '@/components/FAQ';
 
@@ -59,7 +58,7 @@ export default function AiSchoolManagementBlog() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg prose-purple text-slate-700">
           <Image
             src="/images/blog/school-management-ai.jpg"
-            alt="AI School Management System"
+            alt="Transformative AI-Powered School Management System for modern education"
             width={1200}
             height={675}
             quality={85}

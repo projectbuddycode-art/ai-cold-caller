@@ -1,7 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { containerVariants, itemVariants } from '@/components/animations';
+import { motion } from 'framer-motion';
 import { Calendar, Clock, User, Tag } from 'lucide-react';
 import { useContactForm } from '@/contexts/ContactFormContext';
 import Image from 'next/image';
@@ -73,7 +72,7 @@ export default function Blog() {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            {posts.map((post, idx) => (
+            {posts.map((post) => (
               <article
                 key={post.slug}
                 className="bg-white rounded-xl p-8 border border-slate-200 shadow-soft-lg hover:shadow-soft-xl transition-all"

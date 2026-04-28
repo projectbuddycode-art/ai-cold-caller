@@ -1,8 +1,8 @@
-'use client';
+ 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { containerVariants, itemVariants } from './animations';
-import { Zap, Cpu, Phone, Smartphone, LayoutDashboard, Workflow, BookOpen, Users } from 'lucide-react';
+import { Zap, Cpu, Smartphone, Workflow } from 'lucide-react';
 
 export default function WhatWeDo() {
   const services = [
@@ -40,36 +40,7 @@ export default function WhatWeDo() {
     },
   ];
 
-  const industries = [
-    {
-      icon: LayoutDashboard,
-      title: 'Real Estate',
-      description: 'Automate lead capture, property management, and client communication for real estate businesses.',
-      color: 'from-yellow-500 to-yellow-600',
-      lightColor: 'from-yellow-50 to-yellow-100',
-    },
-    {
-      icon: Phone,
-      title: 'Service Businesses',
-      description: 'Enhance customer service, appointment booking, and operational efficiency for various service industries.',
-      color: 'from-teal-500 to-teal-600',
-      lightColor: 'from-teal-50 to-teal-100',
-    },
-    {
-      icon: BookOpen, // Assuming BookOpen is imported from lucide-react
-      title: 'Education (Schools)',
-      description: 'Implement AI-powered systems for student management, performance analysis, and administrative tasks in educational institutions.',
-      color: 'from-cyan-500 to-cyan-600',
-      lightColor: 'from-cyan-50 to-cyan-100',
-    },
-    {
-      icon: Users, // Assuming Users is imported from lucide-react
-      title: 'Agencies',
-      description: 'Streamline client acquisition, project management, and reporting for marketing and creative agencies.',
-      color: 'from-pink-500 to-pink-600',
-      lightColor: 'from-pink-50 to-pink-100',
-    },
-  ];
+  // industries data removed (unused)
 
 
   return (

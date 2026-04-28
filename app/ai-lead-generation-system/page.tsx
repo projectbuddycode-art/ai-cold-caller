@@ -1,7 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { containerVariants, itemVariants } from '@/components/animations';
+import { motion } from 'framer-motion';
 import { Zap, Lightbulb, Rocket, TrendingUp, Shield, Users } from 'lucide-react';
 import { useContactForm } from '@/contexts/ContactFormContext';
 import Image from 'next/image';

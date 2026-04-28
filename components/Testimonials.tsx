@@ -11,37 +11,37 @@ export default function Testimonials() {
       quote: "They built our entire AI calling system in 6 weeks. The quality of engineering was top-notch, and they were responsive to every request. Highly recommended.",
       author: 'Sarah Chen',
       role: 'CEO, PropTech Startup',
-      rating: 5, // Consistent rating
-      image: '/images/testimonials/avatar-1.jpg', // Placeholder image
+      rating: 5,
+      image: '/images/muskan.jpg',
     },
     {
       quote: "From concept to production, they handled everything. Our lead generation increased by 65% in the first month. Worth every penny.",
       author: 'James Rodriguez',
       role: 'Founder, SaaS Platform',
-      rating: 5, // Consistent rating
-      image: '/images/testimonials/avatar-2.jpg', // Placeholder image
+      rating: 5,
+      image: '/images/vaibhav.jpg',
     },
     {
       quote: "The team understood our vision immediately and delivered beyond expectations. Their AI automation cut our operational costs in half.",
       author: 'Michael Park',
       role: 'Operations Director, Scale-up',
-      rating: 5, // Consistent rating
-      image: '/images/testimonials/avatar-3.jpg', // Placeholder image
+      rating: 5,
+      image: '/images/logo.jpg',
     },
     // Indian client reviews
     {
       quote: "Project Buddy's AI solutions transformed our customer outreach. We saw a significant increase in engagement within weeks. The team is highly professional and delivers exceptional results.",
       author: 'Priya Sharma',
       role: 'Head of Marketing, Global Fintech',
-      rating: 5, // Consistent rating
-      image: '/images/testimonials/avatar-4.jpg', // Placeholder image
+      rating: 5,
+      image: '/images/logo.jpg',
     },
     {
       quote: "Excellent service and support! Their automation helped us scale faster and reduced manual work drastically. Highly recommended for any business looking to innovate.",
       author: 'Amit Verma',
       role: 'Co-Founder, SaaS Solutions',
-      rating: 5, // Consistent rating
-      image: '/images/testimonials/avatar-5.jpg', // Placeholder image
+      rating: 5,
+      image: '/images/muskan.jpg',
     },
     {
       quote: "We were impressed by the quick turnaround and deep technical expertise. The results exceeded our expectations. Will work with them again!",

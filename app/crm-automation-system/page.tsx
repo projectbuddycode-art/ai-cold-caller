@@ -1,7 +1,6 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { containerVariants, itemVariants } from '@/components/animations';
+import { motion } from 'framer-motion';
 import { Database, Users, TrendingUp, Shield, Settings, Mail } from 'lucide-react';
 import { useContactForm } from '@/contexts/ContactFormContext';
 import Image from 'next/image'; // Import Image component

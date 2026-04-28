@@ -13,11 +13,11 @@ export default function GlobalClients() {
 
   const clients = [
     { name: 'Project Buddy', logo: '/images/logo.jpg' },
+    { name: 'Shivam Dubey', logo: '/images/founder.jpg' },
+    { name: 'Muskan', logo: '/images/muskan.jpg' },
+    { name: 'Vaibhav', logo: '/images/vaibhav.jpg' },
     { name: 'Project Buddy', logo: '/images/logo.jpg' },
-    { name: 'Project Buddy', logo: '/images/logo.jpg' },
-    { name: 'Project Buddy', logo: '/images/logo.jpg' },
-    { name: 'Project Buddy', logo: '/images/logo.jpg' },
-    { name: 'Project Buddy', logo: '/images/logo.jpg' },
+    { name: 'Muskan', logo: '/images/muskan.jpg' },
   ];
 
   const reasons = [

@@ -6,8 +6,9 @@ import Image from 'next/image';
 
 export default function Authority() {
   const companies = [
-    { name: 'JP Morgan', initials: 'JPM', logo: '/images/clients/jpm.png' },
-    { name: 'Cisco', initials: 'CISCO', logo: '/images/clients/cisco.png' },
+    { name: 'Project Buddy', initials: 'PB', logo: '/images/logo.jpg' },
+    { name: 'Founder', initials: 'SD', logo: '/images/founder.jpg' },
+    { name: 'Muskan', initials: 'M', logo: '/images/muskan.jpg' },
   ];
 
   return (

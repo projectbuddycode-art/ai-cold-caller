@@ -10,43 +10,49 @@ export default function Testimonials() {
       quote: 'They modernized our CRM and implemented AI workflows. Reduced manual data entry by 70%. Operational efficiency improved significantly.',
       author: 'Sarah Chen',
       role: 'VP Operations, Financial Services',
-      rating: 5, // Consistent rating
-      image: '/images/testimonials/avatar-1.jpg', // Placeholder image
+      rating: 5,
+      gradient: 'from-blue-500 to-indigo-600',
+      initial: 'SC',
     },
     {
       quote: 'Operational intelligence framework gave us real-time visibility. AI dashboards transformed decision-making. Outstanding technical execution.',
       author: 'James Rodriguez',
       role: 'COO, Enterprise Manufacturing',
       rating: 5,
-      image: '/images/testimonials/avatar-2.jpg',
+      gradient: 'from-purple-500 to-pink-600',
+      initial: 'JR',
     },
     {
       quote: 'Audited workflows, identified inefficiencies, built intelligent systems. Team productivity 3x higher. Results exceeded expectations.',
       author: 'Michael Park',
       role: 'Director of Operations, Global Enterprise',
       rating: 5,
-      image: '/images/testimonials/avatar-3.jpg',
+      gradient: 'from-cyan-500 to-blue-600',
+      initial: 'MP',
     },
     {
       quote: 'AI modernization project exceeded expectations. System integration seamless, immediate operational improvements. Highly professional team.',
       author: 'Priya Sharma',
       role: 'Head of Operations, Banking Group',
       rating: 5,
-      image: '/images/testimonials/avatar-4.jpg',
+      gradient: 'from-orange-500 to-red-600',
+      initial: 'PS',
     },
     {
       quote: 'Workflow automation reduced processing time by 60%. Clear ROI from day one. Highly recommended for enterprise modernization.',
       author: 'Amit Verma',
       role: 'Operations Manager, Supply Chain',
       rating: 5,
-      image: '/images/testimonials/avatar-5.jpg',
+      gradient: 'from-emerald-500 to-teal-600',
+      initial: 'AV',
     },
     {
       quote: 'Deep understanding of enterprise operations. Complex systems implementation seamless. True transformation partner for our organization.',
       author: 'Sneha Patel',
       role: 'Director of Digital Transformation',
       rating: 5,
-      image: '👩‍💼',
+      gradient: 'from-rose-500 to-pink-600',
+      initial: 'SP',
     },
   ];
 
@@ -119,21 +125,8 @@ export default function Testimonials() {
 
                 {/* Author */}
                 <div className="flex items-center gap-4 pt-8 border-t border-slate-200">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-2xl relative overflow-hidden">
-                    {testimonial.image.startsWith('/') ? (
-                      <img
-                        src={testimonial.image}
-                        alt={`Testimonial from ${testimonial.author}, ${testimonial.role}`}
-                        className="object-cover w-full h-full"
-                        onError={(e) => {
-                          const t = e.currentTarget as HTMLImageElement;
-                          t.onerror = null;
-                          t.src = '/images/placeholder-avatar.svg';
-                        }}
-                      />
-                    ) : (
-                      <span role="img" aria-label="Profile avatar">{testimonial.image}</span>
-                    )}
+                  <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${testimonial.gradient} flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}>
+                    {testimonial.initial}
                   </div>
                   <div>
                     <h4 className="font-semibold text-slate-900">

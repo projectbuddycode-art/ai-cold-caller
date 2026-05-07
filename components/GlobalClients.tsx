@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Globe, Zap, Lock, DollarSign } from 'lucide-react';
+import Image from 'next/image';
 
 export default function GlobalClients() {
   const stats = [
@@ -11,16 +12,16 @@ export default function GlobalClients() {
   ];
 
   const clients = [
-    { name: 'Google', gradient: 'from-red-500 to-yellow-500', initials: 'G' },
-    { name: 'Microsoft', gradient: 'from-blue-500 to-cyan-500', initials: 'MS' },
-    { name: 'Amazon', gradient: 'from-orange-500 to-red-500', initials: 'A' },
-    { name: 'Airbnb', gradient: 'from-pink-500 to-red-500', initials: 'AB' },
-    { name: 'Salesforce', gradient: 'from-blue-600 to-blue-400', initials: 'SF' },
-    { name: 'IBM', gradient: 'from-blue-700 to-blue-600', initials: 'IBM' },
-    { name: 'Meta', gradient: 'from-indigo-600 to-purple-600', initials: 'M' },
-    { name: 'Spotify', gradient: 'from-green-500 to-emerald-600', initials: 'SP' },
-    { name: 'Slack', gradient: 'from-purple-500 to-pink-500', initials: 'SK' },
-    { name: 'Uber', gradient: 'from-gray-800 to-gray-600', initials: 'U' },
+    { name: 'Google', logo: '/images/logos/google.svg' },
+    { name: 'Microsoft', logo: '/images/logos/microsoft.svg' },
+    { name: 'Amazon', logo: '/images/logos/amazon.svg' },
+    { name: 'Airbnb', logo: '/images/logos/airbnb.svg' },
+    { name: 'Salesforce', logo: '/images/logos/salesforce.svg' },
+    { name: 'IBM', logo: '/images/logos/ibm.svg' },
+    { name: 'Meta', logo: '/images/logos/meta.svg' },
+    { name: 'Spotify', logo: '/images/logos/spotify.svg' },
+    { name: 'Slack', logo: '/images/logos/slack.svg' },
+    { name: 'Uber', logo: '/images/logos/uber.svg' },
   ];
 
   const reasons = [
@@ -116,9 +117,13 @@ export default function GlobalClients() {
                   className="flex-shrink-0 w-40 h-24 flex items-center justify-center p-4 bg-white rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 cursor-pointer group"
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
-                  <div className={`relative w-16 h-16 flex items-center justify-center rounded-lg bg-gradient-to-br ${client.gradient} shadow-lg group-hover:shadow-xl transition-all duration-300`}>
-                    <span className="text-white font-bold text-sm">{client.initials}</span>
-                  </div>
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 object-contain"
+                  />
                 </motion.div>
               ))}
               
@@ -129,9 +134,13 @@ export default function GlobalClients() {
                   className="flex-shrink-0 w-40 h-24 flex items-center justify-center p-4 bg-white rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 cursor-pointer group"
                   whileHover={{ scale: 1.05, y: -5 }}
                 >
-                  <div className={`relative w-16 h-16 flex items-center justify-center rounded-lg bg-gradient-to-br ${client.gradient} shadow-lg group-hover:shadow-xl transition-all duration-300`}>
-                    <span className="text-white font-bold text-sm">{client.initials}</span>
-                  </div>
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 object-contain"
+                  />
                 </motion.div>
               ))}
             </motion.div>

@@ -1,0 +1,33 @@
+# Project Buddy - AI Software Modernization & Operational Intelligence
+# Robots.txt for SEO optimization
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*.json$
+Disallow: /thank-you/
+Disallow: /policies/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Specific rules for Googlebot for faster crawling of high-priority content
+User-agent: Googlebot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 0
+
+# Bing bot
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://www.projectbuddy.co.in/sitemap.xml
+
+# Host specification for www version (www is canonical)
+Host: https://www.projectbuddy.co.in

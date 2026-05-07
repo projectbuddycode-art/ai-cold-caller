@@ -7,34 +7,64 @@ import { useContactForm } from '@/contexts/ContactFormContext';
 
 const faqs = [
   {
-    question: 'How long does a typical AI modernization project take?',
+    question: 'What is AI software modernization and how does it benefit enterprises?',
     answer:
-      'Most operational modernization projects complete in 8-16 weeks from audit to full deployment. This includes systems analysis, strategy development, system implementation, testing, and optimization. We provide milestone-based delivery with regular progress reviews.',
+      'AI software modernization transforms legacy systems with artificial intelligence and workflow automation, improving operational efficiency, reducing manual processes, and enabling data-driven decision-making. Enterprises typically see 30-50% cost reduction, 40-60% faster operations, and significantly improved customer experiences through intelligent automation and operational intelligence systems.',
   },
   {
-    question: 'What is the typical cost for an AI modernization engagement?',
+    question: 'How does operational intelligence help improve business operations?',
     answer:
-      'Engagements range from $75K to $500K+ depending on scale and complexity. An operational audit and modernization strategy starts at $75K. Full system implementation typically runs $200K-$350K. We provide transparent pricing with clear ROI projections before starting any work.',
+      'Operational intelligence uses real-time data, AI analytics, and intelligent dashboards to provide actionable insights into business processes. It enables proactive decision-making, identifies bottlenecks, predicts issues before they occur, optimizes resource allocation, and transforms raw data into strategic advantage. Organizations gain complete visibility into operations and can respond instantly to changes.',
   },
   {
-    question: 'How is Project Buddy different from traditional consulting firms?',
+    question: 'What is workflow automation and how can it transform our business?',
     answer:
-      'We\'re engineer-first, not sales-focused. You get hands-on technical leadership and implementation, not theoretical recommendations. We\'ve built systems at JP Morgan and Cisco. We understand enterprise operations deeply and deliver working systems, not just reports.',
+      'Workflow automation uses AI to streamline repetitive business processes, eliminate manual tasks, and improve consistency. It accelerates cycle times (often by 50%+ ), reduces human error, frees teams for strategic work, improves compliance, and enables seamless integration across systems. Common applications include lead qualification, order processing, invoice handling, and customer service.',
   },
   {
-    question: 'Do you work with enterprises of all sizes?',
+    question: 'How long does an AI modernization project take?',
     answer:
-      'Yes. We work with mid-market through Fortune 500 companies. Our framework scales from $5M revenue companies to massive enterprises. We understand different operational maturity levels and customize our approach accordingly.',
+      'Most operational modernization projects complete in 8-16 weeks from audit to deployment. This includes systems analysis, strategy development, AI implementation, integration, testing, and optimization with milestone-based delivery and regular progress reviews. Complex enterprise transformations may take 4-6 months. We provide transparent timelines before starting.',
   },
   {
-    question: 'What systems do you modernize and integrate with?',
+    question: 'What is the typical cost for AI modernization and workflow automation?',
     answer:
-      'We build and integrate with: CRM systems (Salesforce, HubSpot, custom), ERP platforms, legacy mainframe systems, financial systems, supply chain management, and custom databases. We\'re framework-agnostic and work with your existing tech stack to modernize and improve it.',
+      'Engagements range from $75K to $500K+ depending on scale and complexity. Initial operational audits and modernization strategies start at $75K. Full system implementation typically runs $200K-$350K. We provide transparent pricing with clear ROI projections and measure success by business impact, not implementation cost.',
   },
   {
-    question: 'How do you ensure minimal disruption during implementation?',
+    question: 'Can AI modernization integrate with our existing enterprise systems?',
     answer:
-      'We follow a phased rollout approach with parallel systems running, comprehensive testing, team training, and full documentation. We manage all technical risk so your operations stay stable during the transition. Post-launch support is included.',
+      'Yes. We modernize and integrate with all major systems: CRM (Salesforce, HubSpot, Pipedrive), ERP (SAP, Oracle), legacy mainframes, financial systems, supply chain management, and custom databases. We\'re technology-agnostic and work seamlessly with your existing tech stack to enhance, not replace, current infrastructure.',
+  },
+  {
+    question: 'How does Project Buddy approach operational intelligence implementation?',
+    answer:
+      'We start with deep operational audits to understand current processes, pain points, and data infrastructure. We build AI models for your specific use cases, create intelligent dashboards for real-time visibility, integrate data sources, and implement continuous improvement. Our approach combines technical excellence with change management to ensure adoption.',
+  },
+  {
+    question: 'What results can we expect from workflow modernization?',
+    answer:
+      'Typical results include: 30-50% reduction in operational costs, 40-60% faster process completion, 70%+ reduction in manual errors, improved compliance and audit readiness, faster employee onboarding, and significantly better customer experiences. ROI typically appears within 3-6 months of implementation with ongoing efficiency gains.',
+  },
+  {
+    question: 'How does AI help with business process automation?',
+    answer:
+      'AI-powered business process automation uses machine learning to understand patterns, make intelligent decisions, and handle complex workflows without human intervention. It manages edge cases better than rule-based automation, improves over time through learning, and scales effortlessly. Common applications include customer support automation, financial reconciliation, and supply chain optimization.',
+  },
+  {
+    question: 'How do you ensure smooth implementation with minimal disruption?',
+    answer:
+      'We use phased rollout approach with parallel systems, comprehensive testing, team training, and full documentation. We manage all technical risk to keep operations stable during transition. Post-launch support is included. We treat your business continuity as our top priority throughout the modernization process.',
+  },
+  {
+    question: 'What makes Project Buddy different from traditional consulting firms?',
+    answer:
+      'We\'re engineer-first and implementation-focused, not sales-oriented. You get hands-on technical leadership delivering working systems, not theoretical reports. With experience building enterprise systems at JP Morgan and Cisco, we deeply understand operational challenges and deliver measurable business impact with proven expertise.',
+  },
+  {
+    question: 'Does Project Buddy work with enterprises of all sizes?',
+    answer:
+      'Yes. We work with mid-market through Fortune 500 companies with revenue from $5M to billions. Our framework and approach scales across different organizational maturity levels. We understand enterprise complexity and customize solutions accordingly, whether you\'re growing rapidly or optimizing established operations.',
   },
 ];
 

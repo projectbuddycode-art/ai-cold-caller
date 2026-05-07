@@ -1,4 +1,5 @@
 <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-  <rect width="48" height="48" fill="#FF9900" rx="4"/>
-  <text x="24" y="32" font-size="24" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">A</text>
+  <text x="24" y="32" font-size="28" font-weight="bold" fill="#FF9900" text-anchor="middle" font-family="Arial, sans-serif">amazon</text>
+  <!-- Arrow underneath -->
+  <path d="M 12 36 Q 24 40 36 36" stroke="#FF9900" stroke-width="2" fill="none" stroke-linecap="round"/>
 </svg>

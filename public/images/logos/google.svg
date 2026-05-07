@@ -1,4 +1,5 @@
 <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-  <rect width="48" height="48" fill="#4285F4" rx="4"/>
-  <text x="24" y="32" font-size="24" font-weight="bold" fill="white" text-anchor="middle" font-family="Arial">G</text>
+  <text x="24" y="35" font-size="28" font-weight="bold" text-anchor="middle" font-family="Arial, sans-serif" letter-spacing="1">
+    <tspan fill="#4285F4">G</tspan><tspan fill="#EA4335">o</tspan><tspan fill="#FBBC04">o</tspan><tspan fill="#4285F4">g</tspan><tspan fill="#34A853">l</tspan><tspan fill="#EA4335">e</tspan>
+  </text>
 </svg>

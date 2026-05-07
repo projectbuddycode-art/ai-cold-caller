@@ -8,10 +8,10 @@ export default function Hero() {
   const { openContactForm } = useContactForm();
   
   const trustBadges = [
-    { icon: Shield, label: 'Built by Engineers\nfrom JP Morgan & Cisco' },
-    { icon: Code, label: 'Production-Ready\nArchitecture' },
-    { icon: Zap, label: '6–8 Week MVP\nDelivery' },
-    { icon: Award, label: 'Serving 50+\nGlobal Clients' },
+    { icon: Shield, label: 'Enterprise-Grade\nSecurity & Infrastructure' },
+    { icon: Code, label: 'Proven AI\nImplementation Framework' },
+    { icon: Zap, label: 'Real-Time\nOperational Intelligence' },
+    { icon: Award, label: 'Serving 50+\nGlobal Enterprises' },
   ];
 
   return (
@@ -39,7 +39,7 @@ export default function Hero() {
           >
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
             <span className="text-sm font-medium text-blue-700">
-              ✓ 6–8 Week MVP Delivery  •  Serving Startups Globally  •  AI + SaaS Specialists
+              ✓ Enterprise AI Modernization  •  Operational Intelligence  •  50+ Global Deployments
             </span>
           </motion.div>
 
@@ -56,7 +56,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="inline-block"
             >
-              AI Automation &
+              AI-Powered Software
             </motion.span>{' '}
             <br />
             <motion.span
@@ -81,7 +81,7 @@ export default function Hero() {
               }}
               className="bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 bg-clip-text text-transparent inline-block"
             > 
-              SaaS MVP Development
+              Modernization for Modern Businesses
             </motion.span>
             <br />
             <motion.span
@@ -90,7 +90,6 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.3 }}
               className="inline-block"
             >
-              for Startups Worldwide
             </motion.span>
           </motion.h1>
 
@@ -101,7 +100,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.25 }}
           >
-            Launch production-ready AI systems and SaaS products in 6–8 weeks. We help startups build intelligent automation that converts leads, scales workflows, and drives revenue.
+            We help businesses modernize existing software systems, automate workflows, reduce operational workload, and improve efficiency using AI-driven systems and intelligent automation.
           </motion.p>
 
           {/* Supporting Paragraph */}
@@ -111,7 +110,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            From AI calling agents to CRM automation, we transform business processes with cutting-edge AI—remotely, efficiently, and built to scale globally.
+            From operational audits to AI implementation, we help enterprises optimize workflows, eliminate inefficiencies, and build intelligent operational infrastructure.
           </motion.p>
           {/* CTA Buttons */}
           <motion.div
@@ -126,7 +125,7 @@ export default function Hero() {
               whileHover={{ y: -4, scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              Schedule Strategy Call →
+              Book AI Audit →
             </motion.button>
             <motion.button
               onClick={openContactForm}
@@ -134,7 +133,7 @@ export default function Hero() {
               whileHover={{ y: -4, scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              Get Free AI System Audit
+              Get Operational Assessment
             </motion.button>
           </motion.div>
         </motion.div>

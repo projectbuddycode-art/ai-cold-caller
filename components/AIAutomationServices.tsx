@@ -7,21 +7,21 @@ export default function AIAutomationServices() {
   const services = [
     {
       icon: Phone,
-      title: 'AI Calling Agents',
-      description: 'Autonomous AI agents that qualify leads, schedule meetings, and handle customer inquiries 24/7. Natural conversation, zero fatigue.',
-      features: ['Multi-language support', 'Real-time qualification', 'CRM integration'],
+      title: 'AI & Operations Audit',
+      description: 'Deep analysis of your workflows, systems, and bottlenecks. Identify automation opportunities and AI modernization potential.',
+      features: ['Workflow analysis', 'Bottleneck identification', 'AI opportunity mapping'],
     },
     {
       icon: Settings,
-      title: 'CRM & Workflow Automation',
-      description: 'Custom CRM systems that eliminate data silos and automate your entire sales pipeline. Built for your unique workflow.',
-      features: ['Fully customized CRM', 'Workflow automation', 'Real-time analytics'],
+      title: 'Workflow Modernization',
+      description: 'Streamline operations by modernizing legacy systems and replacing manual workflows with intelligent automation.',
+      features: ['Process optimization', 'System integration', 'Automation deployment'],
     },
     {
       icon: Zap,
-      title: 'Lead Generation Automation',
-      description: 'AI systems that find, qualify, and nurture leads across email, SMS, WhatsApp, and web. Hands-free lead pipeline.',
-      features: ['Multi-channel outreach', 'AI personalization', 'Conversion tracking'],
+      title: 'Operational Intelligence Systems',
+      description: 'Build real-time dashboards and AI-powered reporting systems that provide complete visibility into business operations.',
+      features: ['Real-time monitoring', 'AI-driven insights', 'Executive dashboards'],
     },
   ];
 
@@ -35,10 +35,10 @@ export default function AIAutomationServices() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            AI Automation Services for Startups
+            Operational Intelligence & Modernization Services
           </h2>
           <p className="text-xl text-slate-600 mb-12 max-w-3xl">
-            Automate critical business processes with AI. No more manual work. No more delays.
+            Transform how your business operates. From AI audits to intelligent automation, we modernize your systems and improve operational efficiency.
           </p>
         </motion.div>
 

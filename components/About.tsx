@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { fadeInUp } from './animations';
 import { useContactForm } from '@/contexts/ContactFormContext';
 
@@ -47,16 +48,20 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            {/* Avatar Placeholder */}
+            {/* Avatar Image */}
             <motion.div
-              className="mb-8 relative h-96 rounded-2xl bg-gradient-to-br from-primary-100 to-blue-50 border border-brand-border overflow-hidden flex items-center justify-center"
+              className="mb-8 relative h-80 w-72 rounded-2xl bg-gradient-to-br from-primary-100 to-blue-50 border border-brand-border overflow-hidden mx-auto"
               whileHover={{ y: -4 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="text-center">
-                <div className="text-6xl font-bold text-primary-200 mb-4">SD</div>
-                <p className="text-neutral-400 text-sm">Founder & CTO</p>
-              </div>
+              <Image
+                src="/images/founder.jpg"
+                alt="Shivam Dubey - Founder & CEO"
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 768px) 100vw, 288px"
+              />
 
               {/* Floating accent */}
               <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-br from-orange-200 to-transparent rounded-full blur-2xl opacity-30" />
@@ -112,7 +117,7 @@ export default function About() {
                 <h4 className="text-sm font-semibold text-neutral-900 mb-3 uppercase tracking-wide">
                   What Drives Us
                 </h4>
-                <p className="text-neutral-700 leading-relaxed">Project Buddy is a software development company.
+                <p className="text-neutral-700 leading-relaxed">Project Buddy is an AI Software Modernization & Operational Intelligence company.
                   We believe engineering should be{' '}
                   <strong>simple, scalable, and result-driven.</strong> No fluff,
                   no excuses. Every line of code has a purpose. Every product

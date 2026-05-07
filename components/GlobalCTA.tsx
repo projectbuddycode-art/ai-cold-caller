@@ -16,7 +16,7 @@ export default function GlobalCTA() {
           viewport={{ once: true }}
           className="text-4xl font-bold mb-6"
         >
-          Ready to Build Something Extraordinary?
+          Your Business Doesn\'t Need More Employees. It Needs Smarter Systems.
         </motion.h2>
         
         <motion.p
@@ -26,7 +26,7 @@ export default function GlobalCTA() {
           viewport={{ once: true }}
           className="text-xl mb-8 opacity-95"
         >
-          Let's talk about your product. Free 30-minute strategy call. No obligation. No fluff.
+          Reduce operational workload, improve efficiency, and build intelligent systems that work for you. Let\'s discuss your modernization strategy.
         </motion.p>
         
         <motion.div
@@ -42,7 +42,7 @@ export default function GlobalCTA() {
             whileHover={{ y: -4, scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
-            Schedule Strategy Call
+            Schedule AI Audit
           </motion.button>
           <motion.button
             onClick={openContactForm}
@@ -50,7 +50,7 @@ export default function GlobalCTA() {
             whileHover={{ y: -4, scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
-            Get Free AI System Audit
+            Book Consultation
           </motion.button>
         </motion.div>
       </div>

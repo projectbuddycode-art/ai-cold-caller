@@ -72,28 +72,28 @@ export default function BusinessImpact() {
   const { openContactForm } = useContactForm();
   const metrics = [
     {
-      value: 65,
+      value: 40,
       suffix: '%',
-      label: 'Lead Conversion Increase',
-      description: 'Average improvement for our clients',
+      label: 'Reduction in Repetitive Work',
+      description: 'Average operational workload reduction',
+    },
+    {
+      value: 3,
+      suffix: 'x',
+      label: 'Faster Reporting & Insights',
+      description: 'Improved operational visibility',
     },
     {
       value: 50,
       suffix: '+',
-      label: 'Systems Delivered',
-      description: 'Enterprise & startup projects',
+      label: 'Enterprises Transformed',
+      description: 'Global deployments & implementations',
     },
     {
-      value: 100,
-      suffix: '+',
-      label: 'Hours Saved / Month',
-      description: 'Per client on average',
-    },
-    {
-      value: 6,
-      suffix: '-8W',
-      label: 'MVP Delivery Time',
-      description: 'From concept to launch',
+      value: 2,
+      suffix: 'x',
+      label: 'Scalability Improvement',
+      description: 'Operations support more volume',
     },
   ];
 
@@ -115,10 +115,10 @@ export default function BusinessImpact() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
-            Business Impact
+            Operational Improvement Through AI Modernization
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Real results from enterprise-grade AI & SaaS engineering
+            Real results from enterprise AI transformation and system modernization
           </p>
         </motion.div>
 

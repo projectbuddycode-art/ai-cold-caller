@@ -5,21 +5,21 @@ import { Phone, Mail, MessageSquare, Calendar, HelpCircle, BarChart3 } from 'luc
 
 export default function AIAgentsForBusiness() {
   const aiCapabilities = [
-    { icon: Phone, text: 'Qualify leads via phone with human-like conversation' },
-    { icon: Mail, text: 'Send personalized emails that convert, with AI copywriting' },
-    { icon: MessageSquare, text: 'Handle WhatsApp/SMS outreach at scale' },
-    { icon: Calendar, text: 'Schedule meetings and send reminders automatically' },
-    { icon: HelpCircle, text: 'Answer FAQs and handle customer support' },
-    { icon: BarChart3, text: 'Track analytics and provide actionable insights' },
+    { icon: Phone, text: 'Monitor operations and alert on critical metrics in real-time' },
+    { icon: Mail, text: 'Automatically process and route operational data and documents' },
+    { icon: MessageSquare, text: 'Enable natural language queries against operational systems' },
+    { icon: Calendar, text: 'Schedule and coordinate complex multi-system workflows automatically' },
+    { icon: HelpCircle, text: 'Provide intelligent assistance to operations and support teams' },
+    { icon: BarChart3, text: 'Generate real-time insights and predictive analytics' },
   ];
 
   const useCases = [
-    { industry: 'SaaS Companies', result: 'AI support agents reduce support costs by 60%' },
-    { industry: 'Agencies', result: 'Automated client onboarding and follow-ups' },
-    { industry: 'Startups', result: 'Lead gen on a shoestring budget—zero salespeople needed initially' },
-    { industry: 'E-Commerce', result: 'AI chatbots handling 80% of customer inquiries' },
-    { industry: 'Real Estate', result: '24/7 property inquiry responses and scheduling' },
-    { industry: 'B2B Services', result: 'Automated proposal generation and contract signing' },
+    { industry: 'Financial Services', result: 'AI agents process 10,000+ transactions daily with zero manual intervention' },
+    { industry: 'Enterprise Operations', result: 'Autonomous workflow agents reduce manual tasks by 50%' },
+    { industry: 'Supply Chain', result: 'Real-time monitoring and optimization of logistics operations' },
+    { industry: 'Manufacturing', result: 'Predictive maintenance agents prevent equipment downtime' },
+    { industry: 'Customer Operations', result: 'Intelligent routing and priority management for support teams' },
+    { industry: 'Business Intelligence', result: 'Automated data aggregation and executive reporting' },
   ];
 
   return (
@@ -32,7 +32,7 @@ export default function AIAgentsForBusiness() {
           viewport={{ once: true }}
           className="text-4xl font-bold text-slate-900 mb-12"
         >
-          AI Agents & Intelligent Automation for Business
+          AI Agents & Intelligent Automation for Enterprise Operations
         </motion.h2>
 
         {/* Highlight Box */}
@@ -43,12 +43,12 @@ export default function AIAgentsForBusiness() {
           viewport={{ once: true }}
           className="bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl p-12 text-white mb-12"
         >
-          <h3 className="text-3xl font-bold mb-4">Your Business Never Sleeps</h3>
+          <h3 className="text-3xl font-bold mb-4">Operations That Never Sleep</h3>
           <p className="text-lg mb-6">
-            Our AI agents handle customer interactions, lead qualification, scheduling, and support—24/7, in multiple languages, with zero fatigue or human error.
+            Our intelligent agents autonomously manage operational workflows, monitor systems, process data, and execute business logic—24/7, without human intervention, with zero errors.
           </p>
           <p className="text-lg opacity-90">
-            <strong>Real result:</strong> One client reduced sales cycle from 15 days to 3 days with AI lead qualification.
+            <strong>Real result:</strong> One enterprise reduced operational workload by 50% with autonomous workflow agents processing complex business logic automatically.
           </p>
         </motion.div>
 
@@ -61,7 +61,7 @@ export default function AIAgentsForBusiness() {
             viewport={{ once: true }}
             className="p-8 bg-white rounded-xl border border-slate-200"
           >
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">What AI Agents Do</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-6">Intelligent Agent Capabilities</h3>
             <div className="space-y-4">
               {aiCapabilities.map((item, idx) => {
                 const Icon = item.icon;
@@ -87,7 +87,7 @@ export default function AIAgentsForBusiness() {
             viewport={{ once: true }}
             className="p-8 bg-white rounded-xl border border-slate-200"
           >
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">Use Cases</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-6">Enterprise Use Cases</h3>
             <div className="space-y-4">
               {useCases.map((item, idx) => (
                 <div key={idx} className="pb-4 border-b border-slate-100 last:border-b-0">

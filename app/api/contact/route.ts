@@ -15,20 +15,26 @@ export async function POST(req: Request) {
     const body = await req.json().catch(() => null);
     console.log("Incoming body:", body);
 
-    // Normalize fields
-    const name = body?.name || body?.fullName || "";
+    // Normalize fields - accept both ContactForm and ContactFormModal formats
+    const name = body?.fullName || body?.name || "";
     const email = body?.email || "";
     const company = body?.company || "";
-    const message = body?.message || "";
+    const budget = body?.budget || "";
+    const projectType = body?.projectType || "";
+    const timeline = body?.timeline || "";
+    const message = body?.message || body?.requirement || "";
 
-    // Validate required fields
-    const missingFields = [];
-    if (!name) missingFields.push("name/fullName");
-    if (!email) missingFields.push("email");
-    if (!message) missingFields.push("message");
-    if (missingFields.length > 0) {
+    // Validate required fields (only name, email, and message are required)
+    const errors: { [key: string]: string } = {};
+    if (!name.trim()) errors.fullName = "Full name is required";
+    if (!email.trim()) errors.email = "Email is required";
+    if (!message.trim() || message.trim().length < 10) {
+      errors.message = "Message must be at least 10 characters";
+    }
+    
+    if (Object.keys(errors).length > 0) {
       return NextResponse.json(
-        { error: `Missing required field(s): ${missingFields.join(", ")}` },
+        { success: false, errors },
         { status: 400 }
       );
     }
@@ -36,12 +42,12 @@ export async function POST(req: Request) {
     // Insert into Supabase "leads" table
     const { error } = await supabase
       .from('leads')
-      .insert([{ name, email, company, message }]);
+      .insert([{ name, email, company, budget, projectType, timeline, message }]);
 
     if (error) {
       console.error("Supabase insert error:", error);
       return NextResponse.json(
-        { error: error.message || "Failed to save lead" },
+        { success: false, error: error.message || "Failed to save lead" },
         { status: 500 }
       );
     }

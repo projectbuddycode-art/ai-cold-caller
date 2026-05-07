@@ -7,34 +7,34 @@ import { useContactForm } from '@/contexts/ContactFormContext';
 
 const faqs = [
   {
-    question: 'How long does a typical project take?',
+    question: 'How long does a typical AI modernization project take?',
     answer:
-      'Most MVPs are built in 6-8 weeks from discovery to launch. This includes strategy, architecture design, development, testing, and deployment. The timeline is predictable because we follow a structured process and dedicate founder-level resources.',
+      'Most operational modernization projects complete in 8-16 weeks from audit to full deployment. This includes systems analysis, strategy development, system implementation, testing, and optimization. We provide milestone-based delivery with regular progress reviews.',
   },
   {
-    question: 'What is the typical cost for an AI automation project?',
+    question: 'What is the typical cost for an AI modernization engagement?',
     answer:
-      'Projects range from $30K to $150K+ depending on complexity. A basic AI automation system starts around $30K. Full MVP development typically costs $50K-$100K. We provide transparent pricing after discovery and always deliver exceptional ROI.',
+      'Engagements range from $75K to $500K+ depending on scale and complexity. An operational audit and modernization strategy starts at $75K. Full system implementation typically runs $200K-$350K. We provide transparent pricing with clear ROI projections before starting any work.',
   },
   {
-    question: 'How is Project Buddy different from agencies?',
+    question: 'How is Project Buddy different from traditional consulting firms?',
     answer:
-      'We\'re founder-led with direct engineer access, not staffed with junior developers. You get strategic guidance, not just code. We take ownership of results and provide quarterly strategy reviews. Most agencies move slow and deprioritize your project. We don\'t.',
+      'We\'re engineer-first, not sales-focused. You get hands-on technical leadership and implementation, not theoretical recommendations. We\'ve built systems at JP Morgan and Cisco. We understand enterprise operations deeply and deliver working systems, not just reports.',
   },
   {
-    question: 'Do you work with early-stage startups?',
+    question: 'Do you work with enterprises of all sizes?',
     answer:
-      'Yes. We specifically love working with pre-seed to Series A startups who need to move fast and can\'t waste time with agency bloat. Our structured approach helps you validate ideas quickly and raise efficiently.',
+      'Yes. We work with mid-market through Fortune 500 companies. Our framework scales from $5M revenue companies to massive enterprises. We understand different operational maturity levels and customize our approach accordingly.',
   },
   {
-    question: 'What technologies do you use?',
+    question: 'What systems do you modernize and integrate with?',
     answer:
-      'We\'re framework-agnostic but optimize for speed: Next.js, React, Node.js, Python, PostgreSQL, and modern AI/ML APIs (OpenAI, Claude, Anthropic). We choose the best tech for your specific needs, not what\'s trendy.',
+      'We build and integrate with: CRM systems (Salesforce, HubSpot, custom), ERP platforms, legacy mainframe systems, financial systems, supply chain management, and custom databases. We\'re framework-agnostic and work with your existing tech stack to modernize and improve it.',
   },
   {
-    question: 'Can you integrate with existing systems?',
+    question: 'How do you ensure minimal disruption during implementation?',
     answer:
-      'Absolutely. We audit your current tech stack and build integrations that work seamlessly. Whether it\'s CRM, payment systems, analytics tools, or custom databases—we handle complex integrations as part of the project.',
+      'We follow a phased rollout approach with parallel systems running, comprehensive testing, team training, and full documentation. We manage all technical risk so your operations stay stable during the transition. Post-launch support is included.',
   },
 ];
 

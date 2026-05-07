@@ -63,7 +63,7 @@ export default function WhatWeDo() {
             What We Do
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">Project Buddy is a software development company specializing in:</p>
-          <ul className="text-lg text-slate-600 max-w-2xl mx-auto list-disc list-inside text-left mt-4">
+          <ul className="text-lg text-slate-600 max-w-2xl mx-auto list-disc list-inside mt-4 flex flex-col items-center">
             <li>SaaS product development</li>
             <li>AI automation systems</li>
             <li>Custom business software</li>

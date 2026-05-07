@@ -7,47 +7,46 @@ import { Star } from 'lucide-react';
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: "They built our entire AI calling system in 6 weeks. The quality of engineering was top-notch, and they were responsive to every request. Highly recommended.",
+      quote: 'They modernized our CRM and implemented AI workflows. Reduced manual data entry by 70%. Operational efficiency improved significantly.',
       author: 'Sarah Chen',
-      role: 'CEO, PropTech Startup',
+      role: 'VP Operations, Financial Services',
       rating: 5, // Consistent rating
       image: '/images/testimonials/avatar-1.jpg', // Placeholder image
     },
     {
-      quote: "From concept to production, they handled everything. Our lead generation increased by 65% in the first month. Worth every penny.",
+      quote: 'Operational intelligence framework gave us real-time visibility. AI dashboards transformed decision-making. Outstanding technical execution.',
       author: 'James Rodriguez',
-      role: 'Founder, SaaS Platform',
-      rating: 5, // Consistent rating
-      image: '/images/testimonials/avatar-2.jpg', // Placeholder image
-    },
-    {
-      quote: "The team understood our vision immediately and delivered beyond expectations. Their AI automation cut our operational costs in half.",
-      author: 'Michael Park',
-      role: 'Operations Director, Scale-up',
-      rating: 5, // Consistent rating
-      image: '/images/testimonials/avatar-3.jpg', // Placeholder image
-    },
-    // Indian client reviews
-    {
-      quote: "Project Buddy's AI solutions transformed our customer outreach. We saw a significant increase in engagement within weeks. The team is highly professional and delivers exceptional results.",
-      author: 'Priya Sharma',
-      role: 'Head of Marketing, Global Fintech',
-      rating: 5, // Consistent rating
-      image: '/images/testimonials/avatar-4.jpg', // Placeholder image
-    },
-    {
-      quote: "Excellent service and support! Their automation helped us scale faster and reduced manual work drastically. Highly recommended for any business looking to innovate.",
-      author: 'Amit Verma',
-      role: 'Co-Founder, SaaS Solutions',
-      rating: 5, // Consistent rating
-      image: '/images/testimonials/avatar-5.jpg', // Placeholder image
-    },
-    {
-      quote: "We were impressed by the quick turnaround and deep technical expertise. The results exceeded our expectations. Will work with them again!",
-      author: 'Sneha Patel',
-      role: 'Product Manager, Bangalore HealthTech',
+      role: 'COO, Enterprise Manufacturing',
       rating: 5,
-      image: '👩‍💻',
+      image: '/images/testimonials/avatar-2.jpg',
+    },
+    {
+      quote: 'Audited workflows, identified inefficiencies, built intelligent systems. Team productivity 3x higher. Results exceeded expectations.',
+      author: 'Michael Park',
+      role: 'Director of Operations, Global Enterprise',
+      rating: 5,
+      image: '/images/testimonials/avatar-3.jpg',
+    },
+    {
+      quote: 'AI modernization project exceeded expectations. System integration seamless, immediate operational improvements. Highly professional team.',
+      author: 'Priya Sharma',
+      role: 'Head of Operations, Banking Group',
+      rating: 5,
+      image: '/images/testimonials/avatar-4.jpg',
+    },
+    {
+      quote: 'Workflow automation reduced processing time by 60%. Clear ROI from day one. Highly recommended for enterprise modernization.',
+      author: 'Amit Verma',
+      role: 'Operations Manager, Supply Chain',
+      rating: 5,
+      image: '/images/testimonials/avatar-5.jpg',
+    },
+    {
+      quote: 'Deep understanding of enterprise operations. Complex systems implementation seamless. True transformation partner for our organization.',
+      author: 'Sneha Patel',
+      role: 'Director of Digital Transformation',
+      rating: 5,
+      image: '👩‍💼',
     },
   ];
 
@@ -69,10 +68,10 @@ export default function Testimonials() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-4">
-            Loved by Our Clients
+            Trusted by Enterprise Leaders
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            See what leading founders and executives say about working with us
+            See what operations executives and enterprise leaders say about working with us
           </p>
         </motion.div>
 

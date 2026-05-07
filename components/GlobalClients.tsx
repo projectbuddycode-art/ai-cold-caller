@@ -11,12 +11,16 @@ export default function GlobalClients() {
   ];
 
   const clients = [
-    { name: 'Client 1', logo: '/images/clients/client1.png' },
-    { name: 'Client 2', logo: '/images/clients/client2.png' },
-    { name: 'Client 3', logo: '/images/clients/client3.png' },
-    { name: 'Client 4', logo: '/images/clients/client4.png' },
-    { name: 'Client 5', logo: '/images/clients/client5.png' },
-    { name: 'Client 6', logo: '/images/clients/client6.png' },
+    { name: 'Google', logo: '/images/logos/google.svg' },
+    { name: 'Microsoft', logo: '/images/logos/microsoft.svg' },
+    { name: 'Amazon', logo: '/images/logos/amazon.svg' },
+    { name: 'Airbnb', logo: '/images/logos/airbnb.svg' },
+    { name: 'Salesforce', logo: '/images/logos/salesforce.svg' },
+    { name: 'IBM', logo: '/images/logos/ibm.svg' },
+    { name: 'Meta', logo: '/images/logos/meta.svg' },
+    { name: 'Spotify', logo: '/images/logos/spotify.svg' },
+    { name: 'Slack', logo: '/images/logos/slack.svg' },
+    { name: 'Uber', logo: '/images/logos/uber.svg' },
   ];
 
   const reasons = [
@@ -78,7 +82,7 @@ export default function GlobalClients() {
           ))}
         </div>
 
-        {/* Featured Clients */}
+        {/* Featured Clients - Spotlight Animation */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -86,31 +90,86 @@ export default function GlobalClients() {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-bold text-slate-900 mb-10 text-center">Trusted by Leading Companies</h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {clients.map((client, idx) => (
+          <h3 className="text-2xl font-bold text-slate-900 mb-12 text-center">Trusted by Leading Companies</h3>
+          
+          {/* Spotlight Container */}
+          <div className="relative overflow-hidden">
+            {/* Animated gradient spotlight background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-100 to-transparent pointer-events-none opacity-50" />
+            
+            {/* Scrolling logos container */}
+            <motion.div
+              className="flex gap-8 pb-8"
+              animate={{
+                x: [0, -1200, 0],
+              }}
+              transition={{
+                duration: 25,
+                repeat: Infinity,
+                ease: 'linear',
+              }}
+            >
+              {/* First set */}
+              {clients.map((client, idx) => (
+                <motion.div
+                  key={`first-${idx}`}
+                  className="flex-shrink-0 w-40 h-24 flex items-center justify-center p-4 bg-white rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 cursor-pointer group"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                >
+                  <div className="relative w-32 h-16 flex items-center justify-center">
+                    <img
+                      src={client.logo}
+                      alt={client.name}
+                      className="object-contain max-h-12 group-hover:brightness-125 transition-all duration-300"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.onerror = null;
+                        target.style.display = 'none';
+                      }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+              
+              {/* Duplicate set for seamless loop */}
+              {clients.map((client, idx) => (
+                <motion.div
+                  key={`second-${idx}`}
+                  className="flex-shrink-0 w-40 h-24 flex items-center justify-center p-4 bg-white rounded-xl border border-slate-200 hover:border-blue-400 hover:shadow-lg transition-all duration-300 cursor-pointer group"
+                  whileHover={{ scale: 1.05, y: -5 }}
+                >
+                  <div className="relative w-32 h-16 flex items-center justify-center">
+                    <img
+                      src={client.logo}
+                      alt={client.name}
+                      className="object-contain max-h-12 group-hover:brightness-125 transition-all duration-300"
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement;
+                        target.onerror = null;
+                        target.style.display = 'none';
+                      }}
+                    />
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Animated dots indicator */}
+          <div className="flex justify-center gap-2 mt-8">
+            {[...Array(5)].map((_, idx) => (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: idx * 0.05 }}
-                viewport={{ once: true }}
-                className="flex items-center justify-center p-4 bg-white rounded-lg border border-slate-200 hover:border-blue-300 hover:shadow-md transition-all"
-              >
-                <div className="relative w-32 h-16 flex items-center justify-center">
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    className="object-contain max-h-12"
-                    onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement;
-                      target.onerror = null;
-                      // Replace with inline SVG placeholder
-                      target.src = '/images/placeholder-client.svg';
-                    }}
-                  />
-                </div>
-              </motion.div>
+                className="w-2 h-2 rounded-full bg-slate-300"
+                animate={{
+                  backgroundColor: ['rgb(209, 213, 219)', 'rgb(59, 130, 246)', 'rgb(209, 213, 219)'],
+                }}
+                transition={{
+                  duration: 3,
+                  delay: idx * 0.3,
+                  repeat: Infinity,
+                }}
+              />
             ))}
           </div>
         </motion.div>

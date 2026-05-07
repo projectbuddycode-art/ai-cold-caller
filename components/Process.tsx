@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer } from './animations';
-import { Compass, Palette, Code2, Rocket } from 'lucide-react';
+import { Compass, Palette, Code2, Rocket, Award } from 'lucide-react';
 import { useContactForm } from '@/contexts/ContactFormContext';
 
 export default function Process() {
@@ -11,34 +11,42 @@ export default function Process() {
     {
       number: '01',
       icon: Compass,
-      title: 'Discover',
+      title: 'Audit',
       description:
-        'We deep-dive into your business, market, and tech stack. Understanding your goals and constraints is non-negotiable.',
+        'We analyze your workflows, systems, and bottlenecks. Deep dive into operations to understand current state and inefficiencies.',
       color: 'from-blue-500 to-cyan-500',
     },
     {
       number: '02',
       icon: Palette,
-      title: 'Design',
+      title: 'AI Opportunity Mapping',
       description:
-        'Architecting the solution. We design scalable systems, user flows, and technical specifications that align with your vision.',
+        'Identify where AI and automation can have the most impact. Map automation potential and modernization opportunities.',
       color: 'from-purple-500 to-pink-500',
     },
     {
       number: '03',
       icon: Code2,
-      title: 'Build',
+      title: 'Modernization Strategy',
       description:
-        'Execution at speed. Agile sprints, daily updates, and collaborative development to ship your product fast.',
+        'Create your operational transformation roadmap. Design systems, integrations, and AI workflows aligned with business goals.',
       color: 'from-orange-500 to-red-500',
     },
     {
       number: '04',
       icon: Rocket,
-      title: 'Scale',
+      title: 'AI Implementation',
       description:
-        'Post-launch support, optimization, and scaling. We ensure your product handles growth and evolves with your users.',
+        'Deploy intelligent systems and automation. Build workflows, integrations, and AI agents that modernize operations.',
       color: 'from-green-500 to-emerald-500',
+    },
+    {
+      number: '05',
+      icon: Award,
+      title: 'Continuous Optimization',
+      description:
+        'Monitor performance and continuously improve. Adapt systems as operations evolve and new opportunities emerge.',
+      color: 'from-indigo-500 to-blue-500',
     },
   ];
 
@@ -61,14 +69,13 @@ export default function Process() {
           viewport={{ once: true }}
         >
           <div className="text-sm font-semibold text-primary-600 mb-4 uppercase tracking-wide">
-            Our Methodology
+            Operational Modernization
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-6">
-            The Project Buddy Process
+            Operational Intelligence Framework
           </h2>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            From discovery to scale, we follow a proven framework that
-            eliminates uncertainty.
+            From audit to optimization, we follow a proven framework that modernizes operations and builds intelligent systems.
           </p>
         </motion.div>
 
@@ -84,7 +91,7 @@ export default function Process() {
           <div className="hidden lg:block absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-brand-border via-primary-300 to-brand-border" />
 
           {/* Steps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 relative z-10\">
             {steps.map((step, idx) => {
               const Icon = step.icon;
               return (

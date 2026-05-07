@@ -5,22 +5,22 @@ import { motion } from 'framer-motion';
 export default function CaseResults() {
   const cases = [
     {
-      industry: 'FINTECH STARTUP',
-      result: '3x Growth',
-      description: 'AI lead qualification reduced sales cycle from 15 days to 3 days. Now closing deals 5x faster.',
-      credit: '— Founder, SaaS Platform',
+      industry: 'FINANCIAL SERVICES',
+      result: '70% Faster Processing',
+      description: 'AI-powered document processing and workflow automation reduced manual document handling time by 70%, improving client onboarding speed.',
+      credit: '— Operations Director, Financial Institution',
     },
     {
-      industry: 'B2B AGENCY',
-      result: '60% Cost Reduction',
-      description: 'Custom CRM replaced 5 separate tools. Saved $50k/month in licensing and manual work.',
-      credit: '— Operations Director, Agency',
+      industry: 'ENTERPRISE LOGISTICS',
+      result: '3x Operational Visibility',
+      description: 'Real-time operational intelligence dashboard provides complete visibility into operations. Decision-making time reduced by 60%.',
+      credit: '— VP Operations, Logistics Company',
     },
     {
-      industry: 'E-COMMERCE STARTUP',
-      result: '4x Leads',
-      description: 'AI SMS + email campaigns generated 4x more qualified leads. Conversion rate jumped 2.8x.',
-      credit: '— Marketing Manager, E-Commerce',
+      industry: 'MANUFACTURING',
+      result: '45% Cost Reduction',
+      description: 'Workflow modernization and process automation eliminated redundant systems. Saved $2M annually in operational costs.',
+      credit: '— Plant Manager, Manufacturing Facility',
     },
   ];
 
@@ -34,7 +34,7 @@ export default function CaseResults() {
           viewport={{ once: true }}
           className="text-4xl font-bold text-slate-900 mb-12"
         >
-          Real Results from Real Startups
+          Real Operational Improvements from Real Enterprises
         </motion.h2>
 
         <div className="grid md:grid-cols-3 gap-8">

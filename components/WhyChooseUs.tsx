@@ -7,33 +7,33 @@ export default function WhyChooseUs() {
   const reasons = [
     {
       icon: Users,
-      title: 'Engineers, Not Marketers',
-      description: 'Built by engineers from JP Morgan and Cisco. We write clean code, not sales pitches. Your product is built to scale.',
+      title: 'Enterprise Operations Experts',
+      description: 'Built by engineers from JP Morgan and Cisco. We understand enterprise complexity, security, and scale. Your operations are in expert hands.',
     },
     {
       icon: Zap,
-      title: 'Speed Matters',
-      description: 'Minutes matter. 6-8 weeks from idea to live product. We have zero meetings waste. Every day counts. Async communication everywhere.',
+      title: 'Proven Modernization Framework',
+      description: 'Our operational intelligence framework has been deployed across 50+ enterprises. We know how to modernize systems at scale without disruption.',
     },
     {
       icon: Sparkles,
-      title: 'AI-First Thinking',
-      description: 'Every product we build incorporates intelligent automation. We don\'t tack AI on. We architect it from the ground up.',
+      title: 'AI-First Operational Design',
+      description: 'Every system we build is designed for AI integration from day one. Automation and intelligence are built in, not bolted on.',
     },
     {
       icon: Rocket,
-      title: 'Production-Ready from Day One',
-      description: 'Not a prototype. Not beta. Your MVP launches with proper architecture, security, and scalability baked in.',
+      title: 'Enterprise-Grade Infrastructure',
+      description: 'Not MVP-quality. Your systems launch with proper security, compliance, scalability, and monitoring from day one.',
     },
     {
       icon: DollarSign,
-      title: 'Fixed Project Pricing',
-      description: 'Startups hate surprises. Fixed costs. Clear scope. Built-in contingency. You know exactly what you\'re paying.',
+      title: 'Clear ROI & Transparent Pricing',
+      description: 'You know exactly what you\'re investing. Clear scope, fixed pricing, and measurable operational improvements built into every engagement.',
     },
     {
       icon: Headphones,
-      title: 'Post-Launch Support',
-      description: 'We don\'t disappear after launch. Maintenance, scaling, feature updates. We\'re your long-term partner.',
+      title: 'Long-Term Operational Partner',
+      description: 'We don\'t disappear after launch. Continuous optimization, support, and adaptation as your operations evolve.',
     },
   ];
 
@@ -47,10 +47,10 @@ export default function WhyChooseUs() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold text-slate-900 mb-4">
-            Why Startups Choose Project Buddy
+            Why Enterprises Choose Project Buddy
           </h2>
           <p className="text-xl text-slate-600 mb-12 max-w-3xl">
-            We're not a generic agency. We're built for startup speed and startup thinking.
+            We\'re the operational intelligence partner for enterprises serious about modernization and efficiency.
           </p>
         </motion.div>
 

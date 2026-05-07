@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
+import { useContactForm } from '@/contexts/ContactFormContext';
 import {
   fadeInUp,
   staggerContainer,
@@ -43,41 +44,42 @@ export default function Services() {
   const [expandedService, setExpandedService] = useState<string | null>(
     'automation'
   );
+  const { openContactForm } = useContactForm();
 
   const services: Service[] = [
     {
       id: 'automation',
       icon: Brain,
-      title: 'AI Automation Systems',
-      subtitle: 'Intelligent Workflows That Replace Manual Work',
+      title: 'AI Workflow Automation',
+      subtitle: 'Eliminate Manual Work & Repetitive Tasks',
       problem:
-        'Your team is spending hours on work a system could do in seconds',
+        'Your team spends time on repetitive tasks that could be automated, slowing down operations.',
       benefit:
-        'Save 20+ hours/week with AI-powered workflows that run 24/7 without error',
-      metric: 'Save 20+ hours/week',
-      metricLabel: 'Avg. time savings',
+        'Reduce operational workload by 40%+ with AI automation that handles repetitive workflows 24/7.',
+      metric: '40%+',
+      metricLabel: 'Workload reduction',
       color: 'from-blue-600 to-blue-400',
       bgGradient: 'from-blue-50 to-blue-100/30',
       borderColor: 'border-blue-200',
       details: [
         {
-          title: 'Lead Qualification Automation',
-          description: 'AI scores and routes leads automatically',
+          title: 'Process Automation',
+          description: 'Automate routine business processes and data workflows',
           icon: Lightbulb,
         },
         {
-          title: 'CRM & Workflow Automation',
-          description: 'End-to-end pipeline management without manual input',
+          title: 'Reporting Automation',
+          description: 'Generate real-time reports and operational dashboards',
           icon: TrendingUp,
         },
         {
-          title: 'AI-Powered Sales Agents',
-          description: 'Autonomous agents that handle outreach and follow-up',
+          title: 'Document Processing',
+          description: 'AI-powered document extraction and processing',
           icon: Brain,
         },
         {
-          title: 'Internal Process Automation',
-          description: 'Eliminate repetitive team tasks with intelligent triggers',
+          title: 'Integration Automation',
+          description: 'Connect siloed systems and automate data flow',
           icon: CheckCircle,
         },
       ],
@@ -85,39 +87,39 @@ export default function Services() {
     {
       id: 'saas',
       icon: Code2,
-      title: 'SaaS & MVP Engineering',
-      subtitle: 'Full-Stack Platforms Built for Scale',
+      title: 'CRM & ERP Modernization',
+      subtitle: 'Upgrade Legacy Systems with Intelligent Platforms',
       problem:
-        'You have a product vision but no senior engineering team to execute it',
+        'Your outdated systems create bottlenecks, limit scalability, and prevent automation.',
       benefit:
-        'Production-ready SaaS MVP in 6-8 weeks, architected to scale from day one',
-      metric: '6-8 weeks',
-      metricLabel: 'Avg. time to market',
+        'Modern, AI-ready systems that integrate seamlessly and improve operational efficiency by 3x.',
+      metric: '3x',
+      metricLabel: 'Efficiency improvement',
       color: 'from-orange-600 to-orange-400',
       bgGradient: 'from-orange-50 to-orange-100/30',
       borderColor: 'border-orange-200',
       details: [
         {
-          title: 'Full-Stack Web Applications',
+          title: 'System Migration',
           description:
-            'React, Node.js, scalable architecture from day one',
+            'Upgrade from legacy systems to modern, scalable platforms',
           icon: Code2,
         },
         {
-          title: 'Backend Architecture',
-          description: 'APIs, databases, auth systems, payment processing',
+          title: 'Custom CRM Solutions',
+          description: 'Build CRM systems tailored to your operations',
           icon: TrendingUp,
         },
         {
-          title: 'API Development',
+          title: 'ERP Integration',
           description:
-            'RESTful APIs and third-party integrations',
+            'Integrate ERP systems with automated workflows',
           icon: Brain,
         },
         {
-          title: 'Scalable Cloud Infrastructure',
+          title: 'AI-Powered Features',
           description:
-            'Deploy on AWS, GCP, or Vercel with CI/CD pipelines',
+            'Add intelligent capabilities to existing systems',
           icon: CheckCircle,
         },
       ],
@@ -125,38 +127,38 @@ export default function Services() {
     {
       id: 'integration',
       icon: Zap,
-      title: 'AI Integration & Enhancement',
-      subtitle: 'Add AI to Your Existing Product or Business',
+      title: 'Operational Intelligence Systems',
+      subtitle: 'Real-Time Visibility Into Your Operations',
       problem:
-        'Your product or operations lack the intelligence competitors are already leveraging',
+        'You lack visibility into business operations and can\'t make data-driven decisions quickly.',
       benefit:
-        'AI-powered features that increase product value and automate decision-making',
-      metric: '300%',
-      metricLabel: 'Avg. ROI increase',
+        'AI-powered dashboards and analytics that give you real-time operational intelligence.',
+      metric: '3x',
+      metricLabel: 'Faster insights',
       color: 'from-green-600 to-green-400',
       bgGradient: 'from-green-50 to-green-100/30',
       borderColor: 'border-green-200',
       details: [
         {
-          title: 'AI Feature Integration',
-          description: 'Add LLM-powered features to any product',
+          title: 'AI Dashboards',
+          description: 'Build intelligent dashboards with predictive analytics',
           icon: Lightbulb,
         },
         {
-          title: 'GPT-Powered Tools',
-          description: 'Custom AI assistants and chatbots for your use case',
+          title: 'Business Intelligence',
+          description: 'Deep analysis of operational data and trends',
           icon: Brain,
         },
         {
-          title: 'Intelligent Data Systems',
+          title: 'Predictive Analytics',
           description:
-            'AI analytics and predictive dashboards',
+            'AI forecasting for better business decisions',
           icon: TrendingUp,
         },
         {
-          title: 'Operations Automation',
+          title: 'Alert Systems',
           description:
-            'Internal AI workflows for teams',
+            'Real-time alerts for critical operational metrics',
           icon: CheckCircle,
         },
       ],
@@ -164,20 +166,20 @@ export default function Services() {
     {
       id: 'mobile-web-apps',
       icon: Smartphone,
-      title: 'Mobile & Web Applications',
-      subtitle: 'Intuitive Apps for Every Platform',
-      problem: 'Your business needs a custom application but lacks the expertise to build it',
-      benefit: 'Deliver seamless user experiences with high-performance mobile and web applications',
-      metric: '90%',
-      metricLabel: 'User satisfaction',
+      title: 'AI Assistants & Intelligent Agents',
+      subtitle: 'Build Autonomous Systems for Operations',
+      problem: 'Your organization needs intelligent systems to handle complex tasks and support decision-making',
+      benefit: 'Intelligent AI agents that automate decision-making and operational tasks autonomously',
+      metric: '24/7',
+      metricLabel: 'Operational support',
       color: 'from-purple-600 to-purple-400',
       bgGradient: 'from-purple-50 to-purple-100/30',
       borderColor: 'border-purple-200',
       details: [
-        { title: 'iOS & Android App Development', description: 'Native and cross-platform mobile applications', icon: Smartphone },
-        { title: 'Progressive Web Apps (PWAs)', description: 'Deliver app-like experiences through web browsers', icon: Code2 },
-        { title: 'Responsive Web Design', description: 'Applications optimized for all devices and screen sizes', icon: CheckCircle },
-        { title: 'API Integration & Backend', description: 'Robust backend systems and third-party integrations', icon: TrendingUp },
+        { title: 'AI-Powered Assistants', description: 'Intelligent agents that help with operational decisions', icon: Smartphone },
+        { title: 'Business Logic Automation', description: 'Automate complex business processes with AI agents', icon: Code2 },
+        { title: 'Knowledge Management', description: 'AI systems that organize and leverage institutional knowledge', icon: CheckCircle },
+        { title: 'Process Execution', description: 'Agents that autonomously execute multi-step workflows', icon: TrendingUp },
       ],
 
     },
@@ -211,7 +213,7 @@ export default function Services() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
           >
-            Three Core Service Areas
+            Enterprise Operational Services
           </motion.p>
 
           <motion.h2
@@ -220,9 +222,9 @@ export default function Services() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="text-neutral-900">Focused on </span>
+            <span className="text-neutral-900">Modernize & Optimize </span>
             <span className="bg-gradient-to-r from-primary-600 via-purple-600 to-red-500 bg-clip-text text-transparent">
-              Revenue Impact
+              Business Operations
             </span>
           </motion.h2>
 
@@ -232,7 +234,7 @@ export default function Services() {
             whileInView={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
-            We don&apos;t do everything. We do three things exceptionally well.
+            We help enterprises modernize systems, reduce inefficiencies, and build intelligent operational infrastructure.
           </motion.p>
         </motion.div>
 
@@ -403,6 +405,7 @@ export default function Services() {
 
                     {/* CTA Button */}
                     <motion.button
+                      onClick={openContactForm}
                       className={`mt-8 px-6 py-3 rounded-lg font-semibold text-white bg-gradient-to-r ${service.color} hover:shadow-lg transition-all`}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}

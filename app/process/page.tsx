@@ -1,7 +1,6 @@
 import HowItWorks from '@/components/HowItWorks';
 import Process from '@/components/Process';
 import PremiumCTA from '@/components/PremiumCTA';
-import Footer from '@/components/Footer';
 
 export default function ProcessPage() {
   return (
@@ -9,7 +8,6 @@ export default function ProcessPage() {
       <HowItWorks />
       <Process />
       <PremiumCTA />
-      <Footer />
     </main>
   );
 }

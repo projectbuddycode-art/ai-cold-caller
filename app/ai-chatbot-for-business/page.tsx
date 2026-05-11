@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { MessageCircle, Settings, TrendingUp, Shield, Users } from 'lucide-react';
 import { useContactForm } from '@/contexts/ContactFormContext';
 import Image from 'next/image'; // Import Image component

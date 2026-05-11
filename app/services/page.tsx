@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Services from '@/components/Services';
-import ServiceCards from '@/components/ServiceCards';
+import PremiumServiceCards from '@/components/PremiumServiceCards';
 import PremiumCTA from '@/components/PremiumCTA';
 
 export const metadata: Metadata = {
@@ -15,6 +15,8 @@ export const metadata: Metadata = {
     'AI consulting',
     'workflow modernization',
     'business automation services',
+    'AI software modernization',
+    'intelligent systems',
   ],
   openGraph: {
     title: 'AI Modernization & Workflow Automation Services',
@@ -28,7 +30,7 @@ export default function ServicesPage() {
   return (
     <main className="overflow-hidden" role="main">
       <Services />
-      <ServiceCards />
+      <PremiumServiceCards />
       <PremiumCTA />
     </main>
   );

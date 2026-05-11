@@ -1,22 +1,25 @@
 import { Metadata } from 'next';
-import WhatWeDo from '@/components/WhatWeDo';
-import OurProducts from '@/components/OurProducts';
-import EngineeringDemos from '@/components/EngineeringDemos';
+import TransformationCaseStudies from '@/components/TransformationCaseStudies';
 import PremiumCTA from '@/components/PremiumCTA';
 
 export const metadata: Metadata = {
-  title: 'Our Work - AI Solutions & Products | Project Buddy',
-  description: 'Explore our AI-powered products, solutions, and engineering demos. Operational intelligence, workflow automation, and intelligent business systems.',
+  title: 'Enterprise Transformation Case Studies | Project Buddy',
+  description: 'Explore how we transformed operations across industries with AI modernization, operational intelligence, and workflow automation.',
   keywords: [
-    'AI products',
-    'AI solutions',
-    'operational intelligence products',
-    'workflow automation tools',
-    'business automation software',
+    'case studies',
+    'enterprise transformation',
+    'AI implementation',
+    'operational intelligence',
+    'workflow automation',
+    'business process optimization',
+    'digital transformation',
+    'operational efficiency',
+    'industry solutions',
+    'transformation results',
   ],
   openGraph: {
-    title: 'Our AI Solutions & Engineering Work',
-    description: 'Discover our innovative AI-powered products and solutions for enterprise transformation.',
+    title: 'Our Enterprise Transformation Case Studies',
+    description: 'Discover how we transformed operations and delivered measurable business impact across industries.',
     type: 'website',
     url: 'https://www.projectbuddy.co.in/work',
   },
@@ -25,9 +28,7 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <main className="overflow-hidden" role="main">
-      <WhatWeDo />
-      <OurProducts />
-      <EngineeringDemos />
+      <TransformationCaseStudies />
       <PremiumCTA />
     </main>
   );

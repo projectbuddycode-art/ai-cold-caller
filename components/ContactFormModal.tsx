@@ -193,20 +193,29 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
 
           {/* Modal */}
           <motion.div
-            className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl shadow-2xl max-w-2xl w-full overflow-hidden border border-slate-700/50 my-8"
+            className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-2xl shadow-2xl w-full max-w-2xl overflow-hidden border border-slate-700/50 my-4 sm:my-8 max-h-[90vh] sm:max-h-[95vh] flex flex-col"
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.3 }}
           >
-            {/* Header */}
-            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-6 pt-8 pb-6">
-              <h2 className="text-2xl font-bold text-white">AI & Operational Intelligence</h2>
-              <p className="text-blue-100 text-sm mt-1">Let's discuss your modernization strategy</p>
+            {/* Header with Close Button */}
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 px-4 sm:px-6 pt-6 sm:pt-8 pb-5 sm:pb-6 relative">
+              <button
+                onClick={onClose}
+                className="absolute top-4 sm:top-5 right-4 sm:right-5 p-1.5 hover:bg-blue-700 rounded-lg transition-colors text-white"
+                aria-label="Close form"
+              >
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+              <h2 className="text-lg sm:text-2xl font-bold text-white pr-8">AI & Operational Intelligence</h2>
+              <p className="text-blue-100 text-xs sm:text-sm mt-1">Let's discuss your modernization strategy</p>
             </div>
 
             {/* Form Content */}
-            <div className="p-6 max-h-[80vh] overflow-y-auto">
+            <div className="p-4 sm:p-6 overflow-y-auto flex-1">
               {submitStatus === 'success' ? (
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -238,17 +247,17 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
                   </button>
                 </motion.div>
               ) : (
-                <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
+                <form ref={formRef} onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
                   {/* Row 1: Name & Phone */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-slate-200 mb-2">Full Name *</label>
+                      <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">Full Name *</label>
                       <input
                         type="text"
                         name="fullName"
                         value={formData.fullName}
                         onChange={handleChange}
-                        className={`w-full px-4 py-2.5 bg-slate-800 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all ${
+                        className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all ${
                           errors.fullName ? 'border-red-500' : 'border-slate-700'
                         }`}
                         placeholder="Your name"
@@ -256,13 +265,13 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
                       {errors.fullName && <p className="text-red-400 text-xs mt-1">{errors.fullName}</p>}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-200 mb-2">Phone Number *</label>
+                      <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">Phone Number *</label>
                       <input
                         type="tel"
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className={`w-full px-4 py-2.5 bg-slate-800 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all ${
+                        className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all ${
                           errors.phone ? 'border-red-500' : 'border-slate-700'
                         }`}
                         placeholder="+91 XXXXX XXXXX"
@@ -272,15 +281,15 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
                   </div>
 
                   {/* Row 2: Email & Company */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-slate-200 mb-2">Work Email *</label>
+                      <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">Work Email *</label>
                       <input
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className={`w-full px-4 py-2.5 bg-slate-800 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all ${
+                        className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all ${
                           errors.email ? 'border-red-500' : 'border-slate-700'
                         }`}
                         placeholder="you@company.com"
@@ -288,13 +297,13 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
                       {errors.email && <p className="text-red-400 text-xs mt-1">{errors.email}</p>}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-200 mb-2">Company Name *</label>
+                      <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">Company Name *</label>
                       <input
                         type="text"
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className={`w-full px-4 py-2.5 bg-slate-800 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all ${
+                        className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all ${
                           errors.company ? 'border-red-500' : 'border-slate-700'
                         }`}
                         placeholder="Your company"
@@ -304,41 +313,41 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
                   </div>
 
                   {/* Row 3: Website & Industry */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-slate-200 mb-2">Company Website</label>
+                      <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">Company Website</label>
                       <input
                         type="text"
                         name="website"
                         value={formData.website}
                         onChange={handleChange}
-                        className="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
+                        className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                         placeholder="www.company.com"
                       />
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-200 mb-2">Industry *</label>
+                      <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">Industry *</label>
                       <div className="relative">
                         <button
                           type="button"
                           onClick={() => setOpenDropdown(openDropdown === 'industry' ? null : 'industry')}
-                          className={`w-full px-4 py-2.5 bg-slate-800 border rounded-lg text-slate-100 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all flex justify-between items-center ${
+                          className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border rounded-lg text-slate-100 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all flex justify-between items-center ${
                             errors.industry ? 'border-red-500' : 'border-slate-700'
                           }`}
                         >
-                          <span>{formData.industry || 'Select industry'}</span>
-                          <motion.div animate={{ rotate: openDropdown === 'industry' ? 180 : 0 }}>
+                          <span className="truncate">{formData.industry || 'Select industry'}</span>
+                          <motion.div animate={{ rotate: openDropdown === 'industry' ? 180 : 0 }} className="flex-shrink-0 ml-2">
                             <ChevronDown className="w-4 h-4" />
                           </motion.div>
                         </button>
                         {openDropdown === 'industry' && (
-                          <div className="absolute top-full left-0 right-0 mt-1 bg-slate-700 border border-slate-600 rounded-lg shadow-lg z-10">
+                          <div className="absolute top-full left-0 right-0 mt-1 bg-slate-700 border border-slate-600 rounded-lg shadow-lg z-20 max-h-40 overflow-y-auto">
                             {industryOptions.map(option => (
                               <button
                                 key={option}
                                 type="button"
                                 onClick={() => handleSelectChange('industry', option)}
-                                className="w-full px-4 py-2 text-left text-slate-100 hover:bg-slate-600 transition-colors"
+                                className="w-full px-3 sm:px-4 py-2 text-left text-xs sm:text-sm text-slate-100 hover:bg-slate-600 transition-colors"
                               >
                                 {option}
                               </button>
@@ -351,30 +360,30 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
                   </div>
 
                   {/* Row 4: Team Size & Budget */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                     <div>
-                      <label className="block text-sm font-medium text-slate-200 mb-2">Team Size *</label>
+                      <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">Team Size *</label>
                       <div className="relative">
                         <button
                           type="button"
                           onClick={() => setOpenDropdown(openDropdown === 'teamSize' ? null : 'teamSize')}
-                          className={`w-full px-4 py-2.5 bg-slate-800 border rounded-lg text-slate-100 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all flex justify-between items-center ${
+                          className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border rounded-lg text-slate-100 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all flex justify-between items-center ${
                             errors.teamSize ? 'border-red-500' : 'border-slate-700'
                           }`}
                         >
-                          <span>{formData.teamSize || 'Select team size'}</span>
-                          <motion.div animate={{ rotate: openDropdown === 'teamSize' ? 180 : 0 }}>
+                          <span className="truncate">{formData.teamSize || 'Select team size'}</span>
+                          <motion.div animate={{ rotate: openDropdown === 'teamSize' ? 180 : 0 }} className="flex-shrink-0 ml-2">
                             <ChevronDown className="w-4 h-4" />
                           </motion.div>
                         </button>
                         {openDropdown === 'teamSize' && (
-                          <div className="absolute top-full left-0 right-0 mt-1 bg-slate-700 border border-slate-600 rounded-lg shadow-lg z-10">
+                          <div className="absolute top-full left-0 right-0 mt-1 bg-slate-700 border border-slate-600 rounded-lg shadow-lg z-20 max-h-40 overflow-y-auto">
                             {teamSizeOptions.map(option => (
                               <button
                                 key={option}
                                 type="button"
                                 onClick={() => handleSelectChange('teamSize', option)}
-                                className="w-full px-4 py-2 text-left text-slate-100 hover:bg-slate-600 transition-colors"
+                                className="w-full px-3 sm:px-4 py-2 text-left text-xs sm:text-sm text-slate-100 hover:bg-slate-600 transition-colors"
                               >
                                 {option}
                               </button>
@@ -385,26 +394,26 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
                       {errors.teamSize && <p className="text-red-400 text-xs mt-1">{errors.teamSize}</p>}
                     </div>
                     <div>
-                      <label className="block text-sm font-medium text-slate-200 mb-2">Estimated Budget</label>
+                      <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">Estimated Budget</label>
                       <div className="relative">
                         <button
                           type="button"
                           onClick={() => setOpenDropdown(openDropdown === 'budget' ? null : 'budget')}
-                          className="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all flex justify-between items-center"
+                          className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border border-slate-700 rounded-lg text-slate-100 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all flex justify-between items-center"
                         >
-                          <span>{formData.budget || 'Select budget'}</span>
-                          <motion.div animate={{ rotate: openDropdown === 'budget' ? 180 : 0 }}>
+                          <span className="truncate">{formData.budget || 'Select budget'}</span>
+                          <motion.div animate={{ rotate: openDropdown === 'budget' ? 180 : 0 }} className="flex-shrink-0 ml-2">
                             <ChevronDown className="w-4 h-4" />
                           </motion.div>
                         </button>
                         {openDropdown === 'budget' && (
-                          <div className="absolute top-full left-0 right-0 mt-1 bg-slate-700 border border-slate-600 rounded-lg shadow-lg z-10">
+                          <div className="absolute top-full left-0 right-0 mt-1 bg-slate-700 border border-slate-600 rounded-lg shadow-lg z-20 max-h-40 overflow-y-auto">
                             {budgetOptions.map(option => (
                               <button
                                 key={option}
                                 type="button"
                                 onClick={() => handleSelectChange('budget', option)}
-                                className="w-full px-4 py-2 text-left text-slate-100 hover:bg-slate-600 transition-colors"
+                                className="w-full px-3 sm:px-4 py-2 text-left text-xs sm:text-sm text-slate-100 hover:bg-slate-600 transition-colors"
                               >
                                 {option}
                               </button>
@@ -417,13 +426,13 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
 
                   {/* Operational Challenges */}
                   <div>
-                    <label className="block text-sm font-medium text-slate-200 mb-2">Current Operational Challenges *</label>
+                    <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">Current Operational Challenges *</label>
                     <textarea
                       name="challenges"
                       value={formData.challenges}
                       onChange={handleChange}
                       rows={2}
-                      className={`w-full px-4 py-2.5 bg-slate-800 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none ${
+                      className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none ${
                         errors.challenges ? 'border-red-500' : 'border-slate-700'
                       }`}
                       placeholder="Describe your operational bottlenecks, manual workflows, inefficiencies..."
@@ -433,39 +442,39 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
 
                   {/* Current Tools */}
                   <div>
-                    <label className="block text-sm font-medium text-slate-200 mb-2">Current Software & Tools Used</label>
+                    <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">Current Software & Tools Used</label>
                     <textarea
                       name="currentTools"
                       value={formData.currentTools}
                       onChange={handleChange}
                       rows={2}
-                      className="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"
                       placeholder="CRM, ERP, analytics tools, legacy systems..."
                     />
                   </div>
 
                   {/* AI & Automation Interests */}
                   <div>
-                    <label className="block text-sm font-medium text-slate-200 mb-2">AI & Automation Interests</label>
+                    <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">AI & Automation Interests</label>
                     <textarea
                       name="aiInterests"
                       value={formData.aiInterests}
                       onChange={handleChange}
                       rows={2}
-                      className="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"
                       placeholder="Workflow automation, operational intelligence, AI-powered systems..."
                     />
                   </div>
 
                   {/* Business Goals */}
                   <div>
-                    <label className="block text-sm font-medium text-slate-200 mb-2">Primary Business Goals *</label>
+                    <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">Primary Business Goals *</label>
                     <textarea
                       name="businessGoals"
                       value={formData.businessGoals}
                       onChange={handleChange}
                       rows={2}
-                      className={`w-full px-4 py-2.5 bg-slate-800 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none ${
+                      className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none ${
                         errors.businessGoals ? 'border-red-500' : 'border-slate-700'
                       }`}
                       placeholder="Reduce operational workload, improve efficiency, modernize systems..."
@@ -475,13 +484,13 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
 
                   {/* Additional Notes */}
                   <div>
-                    <label className="block text-sm font-medium text-slate-200 mb-2">Additional Notes</label>
+                    <label className="block text-xs sm:text-sm font-medium text-slate-200 mb-1.5 sm:mb-2">Additional Notes</label>
                     <textarea
                       name="additionalNotes"
                       value={formData.additionalNotes}
                       onChange={handleChange}
                       rows={2}
-                      className="w-full px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-2.5 text-sm bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"
                       placeholder="Anything else you'd like to share..."
                     />
                   </div>
@@ -492,7 +501,7 @@ export default function ContactFormModal({ isOpen, onClose }: ContactFormModalPr
                     disabled={isSubmitting}
                     whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                     whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                    className="w-full mt-6 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:from-slate-600 disabled:to-slate-600 text-white font-bold rounded-lg transition-all flex items-center justify-center gap-2"
+                    className="w-full mt-4 sm:mt-6 px-4 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 disabled:from-slate-600 disabled:to-slate-600 text-white text-sm sm:text-base font-bold rounded-lg transition-all flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <>

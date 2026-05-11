@@ -66,6 +66,46 @@ const faqs = [
     answer:
       'Yes. We work with mid-market through Fortune 500 companies with revenue from $5M to billions. Our framework and approach scales across different organizational maturity levels. We understand enterprise complexity and customize solutions accordingly, whether you\'re growing rapidly or optimizing established operations.',
   },
+  {
+    question: 'What security and compliance standards do your systems meet?',
+    answer:
+      'Our systems are SOC2 Type II, GDPR, HIPAA, and ISO 27001 compliant. We implement enterprise-grade encryption, access controls, audit trails, and data residency options. All implementations meet your specific compliance requirements. We work closely with your security and legal teams throughout the process.',
+  },
+  {
+    question: 'How do we measure ROI from AI modernization investments?',
+    answer:
+      'We establish clear KPIs before implementation: cost reduction, process time savings, error reduction, revenue impact, and employee productivity gains. We provide monthly dashboards tracking these metrics and conduct quarterly business reviews. Most enterprises see positive ROI within 3-6 months, with 200-400% annual returns.',
+  },
+  {
+    question: 'What happens after the initial implementation?',
+    answer:
+      'We provide 90 days of intensive post-launch support including optimization, issue resolution, and team support. Ongoing support packages are available for continuous improvement, updates, and scaling. We become a strategic partner, not just a vendor.',
+  },
+  {
+    question: 'How does artificial intelligence improve upon traditional automation?',
+    answer:
+      'AI can handle exceptions, learn from patterns, adapt to process variations, and make context-aware decisions without explicit rule programming. Traditional automation requires rigid rule-based configurations. AI-driven automation improves over time, scales better, and handles 80%+ of edge cases automatically.',
+  },
+  {
+    question: 'What industries have you successfully transformed?',
+    answer:
+      'We\'ve delivered transformations across logistics, recruitment, healthcare, education, manufacturing, B2B services, real estate, finance, and more. Our framework adapts to any industry, and we have deep expertise in operational intelligence, workflow automation, and CRM/ERP modernization across all sectors.',
+  },
+  {
+    question: 'Can you help us develop an AI and digital transformation strategy?',
+    answer:
+      'Yes. Our strategy consulting services include technology assessment, AI opportunity mapping, roadmap development, and implementation planning. We work with your executive team to align technology investments with business objectives and competitive positioning.',
+  },
+  {
+    question: 'What data infrastructure is required for operational intelligence?',
+    answer:
+      'We work with existing data infrastructure, databases, cloud platforms, and APIs. If needed, we help design modern data architecture supporting real-time analytics. Data quality and integration are key, so we audit and optimize your data management as part of the implementation.',
+  },
+  {
+    question: 'How quickly can we see measurable improvements?',
+    answer:
+      'Quick wins often appear within 4-6 weeks of implementation. Within 3 months, most enterprises see significant improvements in efficiency metrics. Full benefits typically manifest within 6-12 months as processes optimize and teams adapt to new systems.',
+  },
 ];
 
 export default function FAQ() {

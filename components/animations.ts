@@ -315,3 +315,200 @@ export const itemVariants = {
     },
   }),
 };
+
+// ==========================================
+// PREMIUM ENTERPRISE ANIMATIONS
+// ==========================================
+
+// Glassmorphism card hover with glow
+export const glassmorphicHover = {
+  whileHover: {
+    y: -4,
+    boxShadow: '0 20px 60px rgba(59, 130, 246, 0.3)',
+    transition: {
+      duration: 0.3,
+      ease: 'easeOut',
+    },
+  },
+};
+
+// Glowing border animation
+export const glowingBorder = {
+  animate: {
+    boxShadow: [
+      '0 0 20px 0 rgba(59, 130, 246, 0.3)',
+      '0 0 40px 5px rgba(59, 130, 246, 0.5)',
+      '0 0 20px 0 rgba(59, 130, 246, 0.3)',
+    ],
+    transition: {
+      duration: 3,
+      repeat: Infinity,
+      ease: 'easeInOut',
+    },
+  },
+};
+
+// Smooth gradient shift animation
+export const gradientShift = {
+  animate: {
+    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+    transition: {
+      duration: 6,
+      repeat: Infinity,
+      ease: 'easeInOut',
+    },
+  },
+};
+
+// Animated border gradient
+export const animatedBorderGradient = {
+  animate: {
+    backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'],
+    transition: {
+      duration: 3,
+      repeat: Infinity,
+      ease: 'linear',
+    },
+  },
+};
+
+// Smooth scroll reveal with blur
+export const scrollReveal = {
+  hidden: { opacity: 0, y: 40, filter: 'blur(10px)' },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: {
+      duration: 0.8,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  },
+};
+
+// Icon rotation with scale
+export const iconRotateScale = {
+  whileHover: {
+    rotate: 12,
+    scale: 1.1,
+    transition: {
+      duration: 0.3,
+      ease: 'easeOut',
+    },
+  },
+};
+
+// Content fade in with slide from bottom
+export const contentFadeSlide = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (custom = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      delay: custom * 0.1,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  }),
+};
+
+// Pulse animation for CTA
+export const pulseCTA = {
+  animate: {
+    scale: [1, 1.02, 1],
+    transition: {
+      duration: 2,
+      repeat: Infinity,
+      ease: 'easeInOut',
+    },
+  },
+};
+
+// Smooth parallax effect
+export const parallaxEffect = {
+  initial: { y: 0 },
+  whileInView: { y: -20 },
+  transition: { duration: 0.8 },
+};
+
+// Dashboard metrics counter animation
+export const metricsCounter = {
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+  hidden: {
+    opacity: 0,
+  },
+};
+
+// Smooth modal reveal
+export const modalReveal = {
+  hidden: { opacity: 0, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.4,
+      ease: [0.25, 0.46, 0.45, 0.94],
+    },
+  },
+  exit: {
+    opacity: 0,
+    scale: 0.9,
+    transition: { duration: 0.2 },
+  },
+};
+
+// Animated underline
+export const animatedUnderline = {
+  whileHover: {
+    width: '100%',
+    transition: { duration: 0.4 },
+  },
+  initial: { width: '0%' },
+};
+
+// Floating particles effect
+export const floatingParticle = (index: number) => ({
+  animate: {
+    y: [0, -20 - index * 5, 0],
+    x: [0, Math.sin(index) * 10, 0],
+    opacity: [0, 1, 0],
+    transition: {
+      duration: 3 + index * 0.3,
+      repeat: Infinity,
+      ease: 'easeInOut',
+      delay: index * 0.2,
+    },
+  },
+});
+
+// Text gradient animation
+export const textGradientAnimated = {
+  animate: {
+    backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'],
+    transition: {
+      duration: 8,
+      repeat: Infinity,
+      ease: 'easeInOut',
+    },
+  },
+};
+
+// Smooth bounce on scroll
+export const scrollBounce = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 10,
+    },
+  },
+};

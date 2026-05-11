@@ -14,7 +14,7 @@ import {
   Shield
 } from 'lucide-react';
 import { useContactForm } from '@/contexts/ContactFormContext';
-import { staggerContainer, itemVariants, glassmorphicHover, scrollReveal } from './animations';
+import { staggerContainer, itemVariants } from './animations';
 
 interface ServiceCardProps {
   icon: React.ComponentType<any>;

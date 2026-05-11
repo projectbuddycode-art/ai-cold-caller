@@ -96,7 +96,6 @@ export default function AIOperationsAudit() {
               viewport={{ once: true }}
             >
               {auditSteps.map((step, index) => {
-                const Icon = step.icon;
                 return (
                   <motion.div
                     key={index}

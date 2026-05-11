@@ -1,13 +1,13 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, ReactNode } from 'react';
 import { TrendingUp, Clock, CheckCircle2, Zap } from 'lucide-react';
 
 interface MetricCard {
   icon: any;
   label: string;
-  value: string | number;
+  value: string | number | ReactNode;
   suffix?: string;
   description: string;
   color: string;

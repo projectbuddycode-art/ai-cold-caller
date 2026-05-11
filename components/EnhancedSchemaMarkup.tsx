@@ -2,16 +2,10 @@
 
 interface EnhancedSchemaMarkupProps {
   pageType: 'homepage' | 'services' | 'work' | 'service-detail' | 'case-study';
-  title?: string;
-  description?: string;
-  url?: string;
 }
 
 export default function EnhancedSchemaMarkup({
   pageType,
-  title = 'Project Buddy',
-  description = 'Enterprise AI Software Modernization & Operational Intelligence',
-  url = 'https://www.projectbuddy.co.in',
 }: EnhancedSchemaMarkupProps) {
   const generateSchema = () => {
     const baseSchema = {
@@ -48,6 +42,7 @@ export default function EnhancedSchemaMarkup({
 
     const schemas: { '@context': string; '@type': string; '@graph'?: any[] } | { '@context': string; '@type': string; [key: string]: any } = {
       '@context': 'https://schema.org',
+      '@type': '@graph',
       '@graph': [],
     };
 

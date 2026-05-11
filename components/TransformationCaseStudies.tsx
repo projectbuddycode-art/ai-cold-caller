@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { ArrowRight, TrendingUp, Users2, Zap, BarChart3, Clock } from 'lucide-react';
-import { staggerContainer, itemVariants, scrollReveal } from './animations';
+import { staggerContainer, itemVariants } from './animations';
 import { useContactForm } from '@/contexts/ContactFormContext';
 
 interface CaseStudy {
